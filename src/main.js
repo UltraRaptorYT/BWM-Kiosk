@@ -155,11 +155,6 @@ redirect(
 quizToggle(document.querySelector("#quizBtn"));
 quizToggle(document.querySelector("#quizHomeBtn"));
 
-document.querySelector("#quizDiv").classList.toggle("hidden");
-document.querySelector("#homeDiv").classList.toggle("hidden");
-
-const quizRadios = document.querySelectorAll(".quizRadio");
-
 let lastChecked = null;
 
 let quizDict = {
