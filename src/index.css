@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   border: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -19,7 +19,7 @@
 }
 
 .heroBG {
-  background-image: url("./public/heroBG.jpg");
+  background-image: url("/heroBG.jpg");
   background-size: 107%;
   background-repeat: no-repeat;
   background-position: right top;
@@ -31,4 +31,201 @@
 
 .absolute {
   position: absolute;
+}
+
+#lamrimTitle {
+  position: absolute;
+  top: 5%;
+  left: 2%;
+}
+
+#buddhistCollageDiv {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-3 {
+  gap: 0.75rem; /* 12px */
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.btn {
+  border-radius: 0.375rem; /* 6px */
+  padding-left: 1rem; /* 16px */
+  padding-right: 1rem; /* 16px */
+  padding-top: 0.375rem; /* 6px */
+  padding-bottom: 0.375rem; /* 6px */
+}
+
+.btn-xl {
+  padding-left: 0.875rem; /* 14px */
+  padding-right: 0.875rem; /* 14px */
+  padding-top: 0.625rem; /* 10px */
+  padding-bottom: 0.625rem; /* 10px */
+}
+
+.btn:focus-visible {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+}
+
+.btn-green:hover {
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity, 1));
+}
+
+.btn-green {
+  color: white;
+  background-color: rgb(22 101 52 / var(--tw-bg-opacity, 1));
+}
+
+.text-xl {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+}
+
+#disclaimer {
+  position: absolute;
+  bottom: 2.5%;
+  left: 1%;
+}
+
+.no-underline {
+  text-decoration-line: none;
+}
+
+.text-lg {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.text-4xl {
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+}
+
+#registerDiv {
+  position: absolute;
+  bottom: 25%;
+  left: 5%;
+}
+
+.items-start {
+  align-items: start;
+}
+
+.hidden {
+  display: none;
+}
+
+svg {
+  height: 20px;
+}
+
+.bg-transparent {
+  background: transparent;
+}
+
+#quizHomeBtn {
+  position: absolute;
+  top: 2.5%;
+  right: 2.5%;
+}
+
+.p-5 {
+  padding: 1.25rem; /* 20px */
+}
+
+.text-6xl {
+  font-size: 3.75rem; /* 60px */
+  line-height: 1;
+}
+
+.text-5xl {
+  font-size: 3rem; /* 48px */
+  line-height: 1;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.text-2xl {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+.text-3xl {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.quizGrid {
+  --padding: 10px;
+  width: calc(60px * 2 + var(--padding) * 2);
+  border-radius: 10px;
+  background-color: white;
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.quizGrid > span {
+  text-wrap: balance;
+}
+
+.bg-red-900 {
+  background-color: rgb(127 29 29 / var(--tw-bg-opacity, 1));
+}
+
+.gap-5 {
+  gap: 1.25rem; /* 20px */
+}
+
+.items-center {
+  align-items: center;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#quizRegisterBtn {
+  right: 0;
+  bottom: 20px;
 }
