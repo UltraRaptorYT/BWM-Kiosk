@@ -217,7 +217,7 @@ let quizDict = {
 };
 
 let currentAudio = null;
-let backend_url = "http://localhost:5000";
+let backend_url = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
 
 document.querySelectorAll(".quizRadio").forEach((radio) => {
   radio.addEventListener("click", function (event) {
