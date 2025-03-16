@@ -151,7 +151,7 @@ svg {
   background: transparent;
 }
 
-#quizHomeBtn {
+.homeBtn {
   position: absolute;
   top: 2.5%;
   right: 2.5%;
@@ -262,4 +262,16 @@ input[type="radio"] {
 
 #quizGridDiv {
   min-width: 596px;
+}
+
+.bg-black {
+  background: black;
+}
+
+.bg-black > .homeBtn {
+  fill: white;
+}
+
+.text-white {
+  color: white;
 }

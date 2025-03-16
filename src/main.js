@@ -1,5 +1,5 @@
 import "./index.css";
-import { quizToggle } from "./quiz";
+import { toggle } from "./toggle";
 import { redirect } from "./redirect";
 
 document.querySelector("#app").innerHTML = `
@@ -7,11 +7,11 @@ document.querySelector("#app").innerHTML = `
     <h1 id="lamrimTitle">《菩提道次第广论》</h1>
     <div id="buddhistCollageDiv" class="flex flex-col gap-3 justify-center">
       <h1>吉祥宝聚寺.佛学院</h1>
-      <button class="flex flex-col btn-green text-xl btn">
+      <button class="flex flex-col btn-green text-xl btn" id="seminarsBtn">
         <span>佛学系列讲座</span>
         <span>Buddhism Seminars</span>
       </button>
-      <button class="flex flex-col btn-green text-xl btn">
+      <button class="flex flex-col btn-green text-xl btn" id="lifeBtn">
         <span>观赏：佛学班回顾一年</span>
         <span>Life of a Buddhism Class</span>
       </button>
@@ -38,7 +38,7 @@ document.querySelector("#app").innerHTML = `
     </div>
   </div>
   <div class="hidden fullHeight relative p-5" id="quizDiv">
-    <button class="btn bg-transparent" id="quizHomeBtn">
+    <button class="btn bg-transparent homeBtn" id="quizHomeBtn">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
         <path
           d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
@@ -140,6 +140,17 @@ document.querySelector("#app").innerHTML = `
       </div>
     </div>
   </div>
+  <div class="hidden fullHeight relative p-5 bg-black flex items-center justify-center flex-col gap-3" id="lifeDiv">
+    <button class="btn bg-transparent homeBtn" id="lifeHomeBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+        <path
+          d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+        />
+      </svg>
+    </button>
+    <h1 class="text-white">Life of a buddhism Class 佛学班同学们精彩的一年</h1>
+    <iframe width="1344" height="746" class="" src="https://www.youtube.com/embed/CrTUWIBVrkk?si=vKBcNnJ4iRqmMSTI&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
 `;
 
 redirect(
@@ -152,8 +163,10 @@ redirect(
   "http://bit.ly/bwm_lrclass",
   "_blank"
 );
-quizToggle(document.querySelector("#quizBtn"));
-quizToggle(document.querySelector("#quizHomeBtn"));
+toggle(document.querySelector("#quizBtn"), "quiz");
+toggle(document.querySelector("#quizHomeBtn"), "quiz");
+toggle(document.querySelector("#lifeBtn"), "life");
+toggle(document.querySelector("#lifeHomeBtn"), "life");
 
 let lastChecked = null;
 
