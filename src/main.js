@@ -4,155 +4,156 @@ import { redirect } from "./redirect";
 
 document.querySelector("#app").innerHTML = `
   <div class="heroBG fullHeight relative" id="homeDiv">
-    <h1 id="lamrimTitle">《菩提道次第广论》</h1>
-    <div id="buddhistCollageDiv" class="flex flex-col gap-3 justify-center">
-      <h1>吉祥宝聚寺.佛学院</h1>
-      <button class="flex flex-col btn-green text-xl btn" id="seminarBtn">
-        <span>佛学系列讲座</span>
-        <span>Buddhism Seminars</span>
-      </button>
-      <button class="flex flex-col btn-green text-xl btn" id="lifeBtn">
-        <span>观赏：佛学班回顾一年</span>
-        <span>Life of a Buddhism Class</span>
-      </button>
+    <div id="imgDiv"></div>
+    <div id="topLeftDiv" class="flex flex-col gap-4">
+      <h1 id="lamrimTitle">佛学班招生！Find out more about our new Buddhism Classes here!</h1>
+      <div>
+        <p class="text-xl font-medium">一本蕴含无数智慧的宝典，通往快乐人生的详尽指南！</p>
+        <p class="text-xl font-medium">A book of countless wisdom, a clear guide to a happy life!</p>
+      </div>
     </div>
-    <div
-      id="registerDiv"
-      class="flex flex-col gap-3 justify-center items-start"
-    >
-      <button
-        class="flex flex-col btn-green text-4xl btn btn-xl"
-        id="registerBtn"
-      >
-        <span>我要报名！</span>
+    <div class="flex flex-col gap-5" id="optionDiv">
+      <button class="optionBG" id="quizBtn">
+        <p class="chiText">为什么今生一定要学佛法？</p>
+        <p class="engText">Why Study Buddhism?</p>
       </button>
-      <button
-        class="flex flex-col btn-green text-4xl btn btn-xl"
-        id="quizBtn"
-      >
-        <span>为什么今生一定要学佛法？</span>
+      <button class="optionBG" id="registerBtn">
+        <p class="chiText">想要报名佛学班？点击查看最新开课时间！</p>
+        <p class="engText">Interested in joining a Buddhism Class?</p>
+        <p class="engText">Click to see the latest schedule!</p>
+      </button>
+      <button class="optionBG" id="lifeBtn">
+        <p class="chiText">观赏：我们佛学班的学习旅程</p>
+        <p class="engText">Watch: Journey of our Buddhism Classes</p>
+      </button>
+      <button class="optionBG">
+        <p class="chiText">心灵提升讲座</p>
+        <p class="engText">Ad-hoc Buddhism Seminars</p>
       </button>
     </div>
     <div id="disclaimer">
       <span class="text-lg">*所有课程免费！</span>
     </div>
-  </div>
-  <div class="hidden fullHeight relative p-5" id="quizDiv">
-    <button class="btn bg-transparent homeBtn" id="quizHomeBtn">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-        <path
-          d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
-        />
-      </svg>
-    </button>
-    <h1 class="text-4xl">为什么今生一定要学习佛法？</h1>
-    <div class="flex p-5 w-full gap-5">
-      <div class="grid grid-cols-4 bg-red-900 p-5 gap-3" id="quizGridDiv">
-        <label class="quizGrid flex justify-between items-center gap-2" for="想要快乐">
-          <input type="radio" class="quizRadio" name="quiz" id="想要快乐" value="想要快乐"/>
-
-          <span class="text-center grow flex items-center">Happiness</span>
-          <span class="text-4xl text-center">想要快乐</span>
-        </label>
-        <label class="quizGrid flex justify-between items-center gap-2" for="增长智慧">
-          <input type="radio" class="quizRadio" name="quiz" id="增长智慧" value="增长智慧"/>
-
-          <span class="text-center grow flex items-center">Increase wisdom</span>
-          <span class="text-4xl text-center">增长智慧</span>
-        </label>
-        <label class="quizGrid flex justify-between items-center gap-2" for="更加善良">
-          <input type="radio" class="quizRadio" name="quiz" id="更加善良" value="更加善良"/>
-
-          <span class="text-center grow flex items-center">Increase compassion</span>
-          <span class="text-4xl text-center">更加善良</span>
-        </label>
-        <label class="quizGrid flex justify-between items-center gap-2" for="结交善友">
-          <input type="radio" class="quizRadio" name="quiz" id="结交善友" value="结交善友"/>
-
-          <span class="text-center grow flex items-center">Virtuous friends</span>
-          <span class="text-4xl text-center">结交善友</span>
-        </label>
-        <label class="quizGrid flex justify-between items-center gap-2" for="健康长寿">
-          <input type="radio" class="quizRadio" name="quiz" id="健康长寿" value="健康长寿"/>
-
-          <span class="text-center grow flex items-center">Good health & longevity</span>
-          <span class="text-4xl text-center">健康长寿</span>
-        </label>
-        <label class="quizGrid flex justify-between items-center gap-2" for="减少烦恼">
-          <input type="radio" class="quizRadio" name="quiz" id="减少烦恼" value="减少烦恼"/>
-
-          <span class="text-center grow flex items-center">Reduce afflictions</span>
-          <span class="text-4xl text-center">减少烦恼</span>
-        </label>
-        <label class="quizGrid flex justify-between items-center gap-2" for="增加福报">
-          <input type="radio" class="quizRadio" name="quiz" id="增加福报" value="增加福报"/>
-
-          <span class="text-center grow flex items-center">Increase merits</span>
-          <span class="text-4xl text-center">增加福报</span>
-        </label>
-        <label class="quizGrid flex justify-between items-center gap-2" for="生命意义">
-          <input type="radio" class="quizRadio" name="quiz" id="生命意义" value="生命意义"/>
-
-          <span class="text-center grow flex items-center">Meaning of life</span>
-          <span class="text-4xl text-center">生命意义</span>
-        </label>
-        <label class="quizGrid flex justify-between items-center gap-2" for="停止痛苦">
-          <input type="radio" class="quizRadio" name="quiz" id="停止痛苦" value="停止痛苦"/>
-
-          <span class="text-center grow flex items-center">Stop suffering</span>
-          <span class="text-4xl text-center">停止痛苦</span>
-        </label>
-        <label class="quizGrid flex justify-between items-center gap-2" for="家庭和谐">
-          <input type="radio" class="quizRadio" name="quiz" id="家庭和谐" value="家庭和谐"/>
-
-          <span class="text-center grow flex items-center">Family harmony</span>
-          <span class="text-4xl text-center">家庭和谐</span>
-        </label>
-        <label class="quizGrid flex justify-between items-center gap-2" for="不堕恶趣">
-          <input type="radio" class="quizRadio" name="quiz" id="不堕恶趣" value="不堕恶趣"/>
-
-          <span class="text-center grow flex items-center">Avoid rebirth in lower realms</span>
-          <span class="text-4xl text-center">不堕恶趣</span>
-        </label>
-        <label class="quizGrid flex justify-between items-center gap-2" for="脱离轮回">
-          <input type="radio" class="quizRadio" name="quiz" id="脱离轮回" value="脱离轮回"/>
-
-          <span class="text-center grow flex items-center">Liberate from cyclic existence</span>
-          <span class="text-4xl text-center">脱离轮回</span>
-        </label>
-        <label class="quizGrid flex justify-between items-center gap-2" for="我要成佛">
-          <input type="radio" class="quizRadio" name="quiz" id="我要成佛" value="我要成佛"/>
-
-          <span class="text-center grow flex items-center">Attain buddhahood</span>
-          <span class="text-4xl text-center">我要成佛</span>
-        </label>
-        <label class="quizGrid flex justify-between items-center gap-2" for="心力变强">
-          <input type="radio" class="quizRadio" name="quiz" id="心力变强" value="心力变强"/>
-
-          <span class="text-center grow flex items-center">Enhance mental strength</span>
-          <span class="text-4xl text-center">心力变强</span>
-        </label>
-        <label class="quizGrid flex justify-between items-center gap-2" for="佛门礼仪">
-          <input type="radio" class="quizRadio" name="quiz" id="佛门礼仪" value="佛门礼仪"/>
-
-          <span class="text-center grow flex items-center">Buddhist etiquette</span>
-          <span class="text-4xl text-center">佛门礼仪</span>
-        </label>
-        <label class="quizGrid flex justify-between items-center gap-2" for="面对逆境">
-          <input type="radio" class="quizRadio" name="quiz" id="面对逆境" value="面对逆境"/>
-
-          <span class="text-center grow flex items-center">Learn to face adversity</span>
-          <span class="text-4xl text-center">面对逆境</span>
-        </label>
+    <div id="wheelDiv" class="flex items-center gap-3">
+      <div class="flex flex-col" id="wheelTitle">
+        <p>抽一张智慧法语</p>
+        <p>Spin the wheel to get your</p>
+        </p>Wisdom Quote</p>
       </div>
-      <div class="relative grow flex items-center justify-center">
-        <div class="text-3xl gap-3 flex flex-col" id="selectionText">Please choose one!</div>
-        <button
-          class="absolute flex flex-col btn-gray text-4xl btn btn-xl hidden"
-          id="quizRegisterBtn"
-        >
-          <span>我要报名！</span>
-        </button>
+      <img src="./wheel.png" id="wheel"/>
+    </div>
+  </div>
+  <div class="hidden fullHeight relative" id="quizDiv">
+    <div class="p-5">
+      <button class="btn bg-transparent homeBtn" id="quizHomeBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+          <path
+            d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+          />
+        </svg>
+      </button>
+      <div id="quizTitle">
+        <h1 class="text-4xl">
+          <span class="goldText">为什么要</span>
+          <span class="redText">学佛？</span>
+        </h1>
+        <h1 class="text-4xl">
+          <span class="goldText">Why learn</span>
+          <span class="redText">Buddhism?</span>
+        </h1>
+      </div>
+      <div class="flex p-5 w-full gap-5">
+        <div class="grid grid-cols-4 bg-red-900 p-5 gap-3" id="quizGridDiv">
+          <label class="quizGrid flex justify-between items-center gap-2" for="想要快乐">
+            <input type="radio" class="quizRadio" name="quiz" id="想要快乐" value="想要快乐"/>
+            <span class="text-center grow flex items-center">Happiness</span>
+            <span class="text-4xl text-center">想要快乐</span>
+          </label>
+          <label class="quizGrid flex justify-between items-center gap-2" for="增长智慧">
+            <input type="radio" class="quizRadio" name="quiz" id="增长智慧" value="增长智慧"/>
+            <span class="text-center grow flex items-center">Increase wisdom</span>
+            <span class="text-4xl text-center">增长智慧</span>
+          </label>
+          <label class="quizGrid flex justify-between items-center gap-2" for="更加善良">
+            <input type="radio" class="quizRadio" name="quiz" id="更加善良" value="更加善良"/>
+            <span class="text-center grow flex items-center">Increase compassion</span>
+            <span class="text-4xl text-center">更加善良</span>
+          </label>
+          <label class="quizGrid flex justify-between items-center gap-2" for="结交善友">
+            <input type="radio" class="quizRadio" name="quiz" id="结交善友" value="结交善友"/>
+            <span class="text-center grow flex items-center">Virtuous friends</span>
+            <span class="text-4xl text-center">结交善友</span>
+          </label>
+          <label class="quizGrid flex justify-between items-center gap-2" for="健康长寿">
+            <input type="radio" class="quizRadio" name="quiz" id="健康长寿" value="健康长寿"/>
+            <span class="text-center grow flex items-center">Good health & longevity</span>
+            <span class="text-4xl text-center">健康长寿</span>
+          </label>
+          <label class="quizGrid flex justify-between items-center gap-2" for="减少烦恼">
+            <input type="radio" class="quizRadio" name="quiz" id="减少烦恼" value="减少烦恼"/>
+            <span class="text-center grow flex items-center">Reduce afflictions</span>
+            <span class="text-4xl text-center">减少烦恼</span>
+          </label>
+          <label class="quizGrid flex justify-between items-center gap-2" for="增加福报">
+            <input type="radio" class="quizRadio" name="quiz" id="增加福报" value="增加福报"/>
+            <span class="text-center grow flex items-center">Increase merits</span>
+            <span class="text-4xl text-center">增加福报</span>
+          </label>
+          <label class="quizGrid flex justify-between items-center gap-2" for="生命意义">
+            <input type="radio" class="quizRadio" name="quiz" id="生命意义" value="生命意义"/>
+            <span class="text-center grow flex items-center">Meaning of life</span>
+            <span class="text-4xl text-center">生命意义</span>
+          </label>
+          <label class="quizGrid flex justify-between items-center gap-2" for="停止痛苦">
+            <input type="radio" class="quizRadio" name="quiz" id="停止痛苦" value="停止痛苦"/>
+            <span class="text-center grow flex items-center">Stop suffering</span>
+            <span class="text-4xl text-center">停止痛苦</span>
+          </label>
+          <label class="quizGrid flex justify-between items-center gap-2" for="家庭和谐">
+            <input type="radio" class="quizRadio" name="quiz" id="家庭和谐" value="家庭和谐"/>
+            <span class="text-center grow flex items-center">Family harmony</span>
+            <span class="text-4xl text-center">家庭和谐</span>
+          </label>
+          <label class="quizGrid flex justify-between items-center gap-2" for="不堕恶趣">
+            <input type="radio" class="quizRadio" name="quiz" id="不堕恶趣" value="不堕恶趣"/>
+            <span class="text-center grow flex items-center">Avoid rebirth in lower realms</span>
+            <span class="text-4xl text-center">不堕恶趣</span>
+          </label>
+          <label class="quizGrid flex justify-between items-center gap-2" for="脱离轮回">
+            <input type="radio" class="quizRadio" name="quiz" id="脱离轮回" value="脱离轮回"/>
+            <span class="text-center grow flex items-center">Liberate from cyclic existence</span>
+            <span class="text-4xl text-center">脱离轮回</span>
+          </label>
+          <label class="quizGrid flex justify-between items-center gap-2" for="我要成佛">
+            <input type="radio" class="quizRadio" name="quiz" id="我要成佛" value="我要成佛"/>
+            <span class="text-center grow flex items-center">Attain buddhahood</span>
+            <span class="text-4xl text-center">我要成佛</span>
+          </label>
+          <label class="quizGrid flex justify-between items-center gap-2" for="心力变强">
+            <input type="radio" class="quizRadio" name="quiz" id="心力变强" value="心力变强"/>
+            <span class="text-center grow flex items-center">Enhance mental strength</span>
+            <span class="text-4xl text-center">心力变强</span>
+          </label>
+          <label class="quizGrid flex justify-between items-center gap-2" for="佛门礼仪">
+            <input type="radio" class="quizRadio" name="quiz" id="佛门礼仪" value="佛门礼仪"/>
+            <span class="text-center grow flex items-center">Buddhist etiquette</span>
+            <span class="text-4xl text-center">佛门礼仪</span>
+          </label>
+          <label class="quizGrid flex justify-between items-center gap-2" for="面对逆境">
+            <input type="radio" class="quizRadio" name="quiz" id="面对逆境" value="面对逆境"/>
+            <span class="text-center grow flex items-center">Learn to face adversity</span>
+            <span class="text-4xl text-center">面对逆境</span>
+          </label>
+        </div>
+        <div class="relative grow flex items-center justify-center">
+          <div class="text-3xl gap-3 flex flex-col" id="selectionText">Please choose one!</div>
+          <button
+            class="absolute flex flex-col btn-gray text-4xl btn btn-xl hidden"
+            id="quizRegisterBtn"
+          >
+            <span>我要报名！</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -182,12 +183,12 @@ document.querySelector("#app").innerHTML = `
 
 redirect(
   document.querySelector("#registerBtn"),
-  "http://bit.ly/bwm_lrclass",
+  "http://bwm.sg/signup",
   "_blank"
 );
 redirect(
   document.querySelector("#quizRegisterBtn"),
-  "http://bit.ly/bwm_lrclass",
+  "http://bwm.sg/signup",
   "_blank"
 );
 toggle(document.querySelector("#quizBtn"), "quiz");
