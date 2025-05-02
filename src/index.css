@@ -19,7 +19,7 @@
 }
 
 .heroBG {
-  background-image: url("/heroBG.jpg");
+  background-image: url("/heroBG.jpeg");
   background-size: 107%;
   background-repeat: no-repeat;
   background-position: right top;
@@ -274,4 +274,15 @@ input[type="radio"] {
 
 .text-white {
   color: white;
+}
+
+.aspectVideo {
+  width: 75%;
+  height: 100%;
+  object-fit: cover; /* Ensures content fits while maintaining aspect ratio */
+  aspect-ratio: 16 / 9; /* Adjust as needed */
+}
+
+.h-full {
+  height: 100%;
 }

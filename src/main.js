@@ -7,7 +7,7 @@ document.querySelector("#app").innerHTML = `
     <h1 id="lamrimTitle">《菩提道次第广论》</h1>
     <div id="buddhistCollageDiv" class="flex flex-col gap-3 justify-center">
       <h1>吉祥宝聚寺.佛学院</h1>
-      <button class="flex flex-col btn-green text-xl btn" id="seminarsBtn">
+      <button class="flex flex-col btn-green text-xl btn" id="seminarBtn">
         <span>佛学系列讲座</span>
         <span>Buddhism Seminars</span>
       </button>
@@ -50,83 +50,99 @@ document.querySelector("#app").innerHTML = `
       <div class="grid grid-cols-4 bg-red-900 p-5 gap-3" id="quizGridDiv">
         <label class="quizGrid flex justify-between items-center gap-2" for="想要快乐">
           <input type="radio" class="quizRadio" name="quiz" id="想要快乐" value="想要快乐"/>
-          <span class="text-6xl">想要快乐</span>
+
           <span class="text-center grow flex items-center">Happiness</span>
+          <span class="text-4xl text-center">想要快乐</span>
         </label>
         <label class="quizGrid flex justify-between items-center gap-2" for="增长智慧">
           <input type="radio" class="quizRadio" name="quiz" id="增长智慧" value="增长智慧"/>
-          <span class="text-6xl">增长智慧</span>
+
           <span class="text-center grow flex items-center">Increase wisdom</span>
+          <span class="text-4xl text-center">增长智慧</span>
         </label>
         <label class="quizGrid flex justify-between items-center gap-2" for="更加善良">
           <input type="radio" class="quizRadio" name="quiz" id="更加善良" value="更加善良"/>
-          <span class="text-6xl">更加善良</span>
+
           <span class="text-center grow flex items-center">Increase compassion</span>
+          <span class="text-4xl text-center">更加善良</span>
         </label>
         <label class="quizGrid flex justify-between items-center gap-2" for="结交善友">
           <input type="radio" class="quizRadio" name="quiz" id="结交善友" value="结交善友"/>
-          <span class="text-6xl">结交善友</span>
+
           <span class="text-center grow flex items-center">Virtuous friends</span>
+          <span class="text-4xl text-center">结交善友</span>
         </label>
         <label class="quizGrid flex justify-between items-center gap-2" for="健康长寿">
           <input type="radio" class="quizRadio" name="quiz" id="健康长寿" value="健康长寿"/>
-          <span class="text-6xl">健康长寿</span>
+
           <span class="text-center grow flex items-center">Good health & longevity</span>
+          <span class="text-4xl text-center">健康长寿</span>
         </label>
         <label class="quizGrid flex justify-between items-center gap-2" for="减少烦恼">
           <input type="radio" class="quizRadio" name="quiz" id="减少烦恼" value="减少烦恼"/>
-          <span class="text-6xl">减少烦恼</span>
+
           <span class="text-center grow flex items-center">Reduce afflictions</span>
+          <span class="text-4xl text-center">减少烦恼</span>
         </label>
         <label class="quizGrid flex justify-between items-center gap-2" for="增加福报">
           <input type="radio" class="quizRadio" name="quiz" id="增加福报" value="增加福报"/>
-          <span class="text-6xl">增加福报</span>
+
           <span class="text-center grow flex items-center">Increase merits</span>
+          <span class="text-4xl text-center">增加福报</span>
         </label>
         <label class="quizGrid flex justify-between items-center gap-2" for="生命意义">
           <input type="radio" class="quizRadio" name="quiz" id="生命意义" value="生命意义"/>
-          <span class="text-6xl">生命意义</span>
+
           <span class="text-center grow flex items-center">Meaning of life</span>
+          <span class="text-4xl text-center">生命意义</span>
         </label>
         <label class="quizGrid flex justify-between items-center gap-2" for="停止痛苦">
           <input type="radio" class="quizRadio" name="quiz" id="停止痛苦" value="停止痛苦"/>
-          <span class="text-6xl">停止痛苦</span>
+
           <span class="text-center grow flex items-center">Stop suffering</span>
+          <span class="text-4xl text-center">停止痛苦</span>
         </label>
         <label class="quizGrid flex justify-between items-center gap-2" for="家庭和谐">
           <input type="radio" class="quizRadio" name="quiz" id="家庭和谐" value="家庭和谐"/>
-          <span class="text-6xl">家庭和谐</span>
+
           <span class="text-center grow flex items-center">Family harmony</span>
+          <span class="text-4xl text-center">家庭和谐</span>
         </label>
         <label class="quizGrid flex justify-between items-center gap-2" for="不堕恶趣">
           <input type="radio" class="quizRadio" name="quiz" id="不堕恶趣" value="不堕恶趣"/>
-          <span class="text-6xl">不堕恶趣</span>
+
           <span class="text-center grow flex items-center">Avoid rebirth in lower realms</span>
+          <span class="text-4xl text-center">不堕恶趣</span>
         </label>
         <label class="quizGrid flex justify-between items-center gap-2" for="脱离轮回">
           <input type="radio" class="quizRadio" name="quiz" id="脱离轮回" value="脱离轮回"/>
-          <span class="text-6xl">脱离轮回</span>
+
           <span class="text-center grow flex items-center">Liberate from cyclic existence</span>
+          <span class="text-4xl text-center">脱离轮回</span>
         </label>
         <label class="quizGrid flex justify-between items-center gap-2" for="我要成佛">
           <input type="radio" class="quizRadio" name="quiz" id="我要成佛" value="我要成佛"/>
-          <span class="text-6xl">我要成佛</span>
+
           <span class="text-center grow flex items-center">Attain buddhahood</span>
+          <span class="text-4xl text-center">我要成佛</span>
         </label>
         <label class="quizGrid flex justify-between items-center gap-2" for="心力变强">
           <input type="radio" class="quizRadio" name="quiz" id="心力变强" value="心力变强"/>
-          <span class="text-6xl">心力变强</span>
+
           <span class="text-center grow flex items-center">Enhance mental strength</span>
+          <span class="text-4xl text-center">心力变强</span>
         </label>
         <label class="quizGrid flex justify-between items-center gap-2" for="佛门礼仪">
           <input type="radio" class="quizRadio" name="quiz" id="佛门礼仪" value="佛门礼仪"/>
-          <span class="text-6xl">佛门礼仪</span>
+
           <span class="text-center grow flex items-center">Buddhist etiquette</span>
+          <span class="text-4xl text-center">佛门礼仪</span>
         </label>
         <label class="quizGrid flex justify-between items-center gap-2" for="面对逆境">
           <input type="radio" class="quizRadio" name="quiz" id="面对逆境" value="面对逆境"/>
-          <span class="text-6xl">面对逆境</span>
+
           <span class="text-center grow flex items-center">Learn to face adversity</span>
+          <span class="text-4xl text-center">面对逆境</span>
         </label>
       </div>
       <div class="relative grow flex items-center justify-center">
@@ -148,8 +164,19 @@ document.querySelector("#app").innerHTML = `
         />
       </svg>
     </button>
-    <h1 class="text-white">Life of a buddhism Class 佛学班同学们精彩的一年</h1>
-    <iframe width="1344" height="746" class="" src="https://www.youtube.com/embed/CrTUWIBVrkk?si=vKBcNnJ4iRqmMSTI&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h1 class="text-white text-center">Life of a buddhism Class 佛学班同学们精彩的一年</h1>
+    <div class="grow flex w-full h-full p-5 items-center justify-center">
+      <iframe class="aspectVideo" src="https://www.youtube.com/embed/CrTUWIBVrkk?si=vKBcNnJ4iRqmMSTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="hidden" id="seminarDiv">
+    <button class="btn bg-transparent homeBtn" id="seminarHomeBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+        <path
+          d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+        />
+      </svg>
+    </button>
   </div>
 `;
 
@@ -167,6 +194,8 @@ toggle(document.querySelector("#quizBtn"), "quiz");
 toggle(document.querySelector("#quizHomeBtn"), "quiz");
 toggle(document.querySelector("#lifeBtn"), "life");
 toggle(document.querySelector("#lifeHomeBtn"), "life");
+toggle(document.querySelector("#seminarBtn"), "seminar");
+toggle(document.querySelector("#seminarHomeBtn"), "seminar");
 
 let lastChecked = null;
 
