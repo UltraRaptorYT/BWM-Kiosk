@@ -98,6 +98,12 @@ document.querySelector("#app").innerHTML = `
       </button>
       <div class="redText text-4xl font-bold">我们佛学班的学习旅程 Life of our Buddhism Classes</div>
       <div id="videoEmbed"></div>
+      <button
+        class="btn-gray text-4xl btn btn-xl"
+        id="lifeRegisterBtn"
+      >
+        <span>现在报名 Sign up now</span>
+      </button>
     </div>
   </div>
   <div class="hidden fullHeight flex items-center" id="seminarDiv">
@@ -177,16 +183,6 @@ document.querySelector("#app").innerHTML = `
 `;
 
 populateQuizGrid(quizDict);
-// redirect(
-//   document.querySelector("#registerBtn"),
-//   "https://bwm.sg/signup",
-//   "_blank"
-// );
-// redirect(
-//   document.querySelector("#quizRegisterBtn"),
-//   "https://bwm.sg/signup",
-//   "_blank"
-// );
 
 document.querySelector("#quizBtn").addEventListener("click", () => {
   stopAudio();
@@ -201,6 +197,12 @@ document.querySelector("#quizHomeBtn").addEventListener("click", () => {
 });
 
 document.querySelector("#quizRegisterBtn").addEventListener("click", () => {
+  stopAudio();
+  resetQuizState();
+  goToView("#signupDiv");
+});
+
+document.querySelector("#lifeRegisterBtn").addEventListener("click", () => {
   stopAudio();
   resetQuizState();
   goToView("#signupDiv");
