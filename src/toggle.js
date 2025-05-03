@@ -3,7 +3,6 @@ export function toggle(element, type, onHideCallback = null) {
     const homeDiv = document.querySelector("#homeDiv");
 
     if (type === "quiz") {
-      const quizDiv = document.querySelector("#quizDiv");
       if (!quizDiv.classList.contains("hidden") && onHideCallback) {
         onHideCallback(); // Call cleanup before hiding
       }
@@ -30,7 +29,13 @@ export function toggle(element, type, onHideCallback = null) {
       }
       wheelSpinnerDiv.classList.toggle("hidden");
       homeDiv.classList.toggle("hidden");
-      console.log("HI");
+    } else if (type === "signup") {
+      const signupDiv = document.querySelector("#signupDiv");
+      if (!signupDiv.classList.contains("hidden") && onHideCallback) {
+        onHideCallback();
+      }
+      signupDiv.classList.toggle("hidden");
+      homeDiv.classList.toggle("hidden");
     } else {
       console.log(type, "TOGGLE ERROR!");
     }

@@ -1,12 +1,13 @@
 import "./index.css";
 import { toggle } from "./toggle";
-import { redirect } from "./redirect";
+// import { redirect } from "./redirect";
 import {
   populateQuizGrid,
   quizDict,
   stopAudio,
   resetQuizState,
 } from "./populateQuizGrid";
+import { goToView } from "./goToView";
 
 document.querySelector("#app").innerHTML = `
   <div class="heroBG fullHeight relative" id="homeDiv">
@@ -24,8 +25,8 @@ document.querySelector("#app").innerHTML = `
         <p class="engText">Why Learn Buddhism?</p>
       </button>
       <button class="optionBG" id="registerBtn">
-        <p class="chiText">想要报名佛学班？点击查看最新开课时间！</p>
-        <p class="engText">Interested in joining a Buddhism Class?</p>
+        <p class="chiText">想要报名佛学班*？点击查看最新开课时间！</p>
+        <p class="engText">Interested in joining a Buddhism Class*?</p>
         <p class="engText">Click to see the latest schedule!</p>
       </button>
       <button class="optionBG" id="lifeBtn">
@@ -38,7 +39,7 @@ document.querySelector("#app").innerHTML = `
       </button>
     </div>
     <div id="disclaimer">
-      <span class="text-lg">*所有课程免费！</span>
+      <span class="text-lg">*所有课程免费！All Classes are FOC!</span>
     </div>
     <button id="wheelDiv" class="flex items-center gap-3 bg-transparent">
       <div class="flex flex-col" id="wheelTitle">
@@ -80,13 +81,13 @@ document.querySelector("#app").innerHTML = `
           class="btn-gray text-4xl btn btn-xl hidden"
           id="quizRegisterBtn"
         >
-          <span>我要报名！</span>
+          <span>现在报名 Sign up now</span>
         </button>
       </div>
     </div>
 
   </div>
-  <div class="hidden fullHeight relative bg-black flex items-center justify-center flex-col gap-3" id="lifeDiv">
+  <div class="hidden fullHeight relative flex items-center justify-center flex-col gap-3" id="lifeDiv">
     <div class="p-5 h-full">
       <button class="btn bg-transparent homeBtn text-white" id="lifeHomeBtn">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -95,10 +96,8 @@ document.querySelector("#app").innerHTML = `
           />
         </svg>
       </button>
-      <h1 class="text-white text-center">Life of a buddhism Class 佛学班同学们精彩的一年</h1>
-      <div class="grow flex w-full h-full p-5 items-center justify-center">
-        <iframe class="aspectVideo" src="https://www.youtube.com/embed/CrTUWIBVrkk?si=vKBcNnJ4iRqmMSTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
+      <div class="text-red">我们佛学班的学习旅程 Life of our Buddhism Classes</div>
+      <div id="videoEmbed"></div>
     </div>
   </div>
   <div class="hidden fullHeight flex items-center" id="seminarDiv">
@@ -111,6 +110,18 @@ document.querySelector("#app").innerHTML = `
     </button>
     <iframe src="https://bwmonastery.org.sg/calendar" width="100%" style="height:90vh" class="grow">
       <p>Your browser does not support iframes.</p>
+    </iframe>
+  </div>
+  <div class="hidden fullHeight flex items-center justify-center" id="signupDiv">
+    <button class="btn bg-transparent homeBtn" id="signupHomeBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+        <path
+          d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+        />
+      </svg>
+    </button>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSddjVJHAfv7dGYaX0igd07FHr7y-OCRCu_72sswv_BjgNy_AA/viewform?embedded=true" width="640" height="900" frameborder="0" marginheight="0" marginwidth="0">
+      Loading…
     </iframe>
   </div>
   <div class="hidden fullHeight relative flex flex-col items-center justify-center" id="wheelSpinnerDiv">
@@ -166,48 +177,81 @@ document.querySelector("#app").innerHTML = `
 `;
 
 populateQuizGrid(quizDict);
-redirect(
-  document.querySelector("#registerBtn"),
-  "https://bwm.sg/signup",
-  "_blank"
-);
-redirect(
-  document.querySelector("#quizRegisterBtn"),
-  "https://bwm.sg/signup",
-  "_blank"
-);
+// redirect(
+//   document.querySelector("#registerBtn"),
+//   "https://bwm.sg/signup",
+//   "_blank"
+// );
+// redirect(
+//   document.querySelector("#quizRegisterBtn"),
+//   "https://bwm.sg/signup",
+//   "_blank"
+// );
 
-toggle(document.querySelector("#quizBtn"), "quiz", () => {
+document.querySelector("#quizBtn").addEventListener("click", () => {
   stopAudio();
   resetQuizState();
+  goToView("#quizDiv");
 });
-toggle(document.querySelector("#quizHomeBtn"), "quiz", () => {
+
+document.querySelector("#quizHomeBtn").addEventListener("click", () => {
   stopAudio();
   resetQuizState();
+  goToView("#homeDiv");
 });
-toggle(document.querySelector("#lifeBtn"), "life", () => {
+
+document.querySelector("#quizRegisterBtn").addEventListener("click", () => {
   stopAudio();
   resetQuizState();
+  goToView("#signupDiv");
 });
-toggle(document.querySelector("#lifeHomeBtn"), "life", () => {
+
+document.querySelector("#signupHomeBtn").addEventListener("click", () => {
   stopAudio();
   resetQuizState();
+  goToView("#homeDiv");
 });
-toggle(document.querySelector("#seminarBtn"), "seminar", () => {
+
+document.querySelector("#registerBtn").addEventListener("click", () => {
   stopAudio();
   resetQuizState();
+  goToView("#signupDiv");
 });
-toggle(document.querySelector("#seminarHomeBtn"), "seminar", () => {
+
+document.querySelector("#lifeBtn").addEventListener("click", () => {
   stopAudio();
   resetQuizState();
+  goToView("#lifeDiv");
 });
-toggle(document.querySelector("#wheelDiv"), "wheel", () => {
+
+document.querySelector("#lifeHomeBtn").addEventListener("click", () => {
   stopAudio();
   resetQuizState();
+  goToView("#homeDiv");
 });
-toggle(document.querySelector("#wheelHomeBtn"), "wheel", () => {
+
+document.querySelector("#seminarBtn").addEventListener("click", () => {
   stopAudio();
   resetQuizState();
+  goToView("#seminarDiv");
+});
+
+document.querySelector("#seminarHomeBtn").addEventListener("click", () => {
+  stopAudio();
+  resetQuizState();
+  goToView("#homeDiv");
+});
+
+document.querySelector("#wheelDiv").addEventListener("click", () => {
+  stopAudio();
+  resetQuizState();
+  goToView("#wheelSpinnerDiv");
+});
+
+document.querySelector("#wheelHomeBtn").addEventListener("click", () => {
+  stopAudio();
+  resetQuizState();
+  goToView("#homeDiv");
 });
 
 function getResultsAtTop(spinnerElement) {
