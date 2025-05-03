@@ -85,50 +85,88 @@ export let quizDict = [
   {
     chiTitle: "生命意义",
     engTitle: "Meaning of life",
-    chiText: [""],
-    engText: [""],
+    chiText: [
+      "我们的生命是无限的相续，这件事情非常重要。为什么呢？假定我们只有短短一生，那么这一生过得好也好，坏也好，反正死了就算了，没什么好谈的。但实际上，人生是无限的相续，对于这一点我们要确定。它有两个意义，一是当我们确定了，才值得我们改变。二是，目前一般人都不谈、不看这个问题，特别是科学主流都不接受这个概念，因此，我愿意把它提出来谈一下。",
+      "生命是无限的。这一生之前还有前生，这一生以后还有来生，前生之前还有前生，来生以后还有来生。人的生命就是这样从头至尾，来生又是这样，而这个里边的关系会继续带下去。",
+      "所以谈人生的问题，必须把无限生命加进来思考，这样的话，不但年轻人会愿意努力改变，就是中年人、老年人也会愿意。因为还有无限生命等在后头，如果不及早准备，依照现在的模式走下去，那后果实在太可怕、太严重，损失也太大了！",
+    ],
+    engText: [
+      "Our life is an unending continuum, and this understanding is extremely important. Why? If we believed that we only had this one short life—whether it goes well or badly—then once it’s over, that’s it. There would be nothing more to discuss. But in reality, life is an infinite continuation, and we must be certain about this. This has two key implications: first, only when we’re sure of this does it make sense to truly change ourselves. Second, most people today don’t consider or discuss this issue—especially the mainstream scientific community, which generally does not accept the concept. That’s why I feel it’s important to bring it up and talk about it.",
+      "Life is infinite. There was a past life before this one, and there will be a future life after this one. Before the previous life, there were lives before that, and after the next life, more lives will follow. Human existence continues like this without end. Each life carries on with connections and consequences from the past.",
+      "So, when we talk about life, we must include the concept of infinite life in our thinking. With this perspective, not only young people will feel motivated to change, but even those in middle or old age will also be willing. Because infinite life lies ahead—if we don’t start preparing now and just keep going with our current habits, the consequences could be truly frightening and severe, and the losses would be far too great.",
+    ],
     audio: "",
   },
   {
     chiTitle: "停止痛苦",
     engTitle: "Stop suffering",
-    chiText: [""],
-    engText: [""],
+    chiText: [
+      "学经典和苦乐有没有关系？学经典究竟可不可以去除痛苦，可不可以得到究竟的快乐？是不是离苦得乐的途径？如果是途径的话，我们拿多少时间来学习教典呢？如果说它是途径，为什么它是途径呢？因为痛苦如果源于颠倒的认知、源于错误的看法，那么把错误的看法颠倒过来的那个就是最重要的。那么谁的语言、谁的劝说、谁的话语、谁的经典，可以让我们把心中的错误改变呢？说：「法、佛法！」法有什么样的作用？能不能改变我们？能不能救护我们？法的定义喔！改变我们什么呢？一定是改变苦的，然后把没有得到的快乐得到，这叫改变。救护，救护是什么意思？如果活得好好的，救我干什么呀？一定是从苦的地方救走，救到乐的地方，所以这是法的特质。",
+    ],
+    engText: [
+      "Does studying scriptures have anything to do with the issue of suffering and happiness? Can studying scriptures really remove suffering, and attain the ultimate happiness? Is it the path to remove suffering and attain happiness? If so, how much time will we devote in studying the scriptures? If it is the way to go, then what kind of path is it? For if suffering and happiness arise from inverted perception and erroneous views, then reversing the erroneous views becomes the most important task. Then whose language, whose persuasion, whose speech, and whose scriptures can help correct our flaws within? The answer is “Dharma – Buddha’s teaching!” What function does the teaching provide? Can it change us? Can it relieve us? Dharma, by definition, is to help us change. What do we need to change? It has to be transforming suffering and to attain the promised happiness. This is known as change. Then what does “relieve” mean? If one lives happily, why do I need to be relieved? It has to be relieving one from suffering aspect to happiness aspect. This is the characteristic of Dharma. ",
+    ],
     audio: "",
   },
   {
     chiTitle: "家庭和谐",
     engTitle: "Family Harmony",
-    chiText: [""],
-    engText: [""],
+    chiText: [
+      "在广论班研讨的时候，我们都知道家家都有很难处理的问题，有的问题就是经年累月地处理不了──其实不是问题处理不了，是心里想不开呀！怎么想也想不开，所以怎么办呢？大家选择来学法，透过开发自己的智慧、开发自己的慈悲心，让自己开心之后，就会发现：其实不用特别非得让别人都做对了，自己才能够开心，不是那么被动的，是只要学到法了，只要心意开解自己就开心。而这个心意开解，不一定都依靠周围的人给你的力量，是依靠法就可以让心得到力量，自己就开解了。我们自己开心了，那不开心的人看到你开心，他也开心了。不然天天家里边愁苦着一张脸，大家都要看你的脸，这样的话都很辛苦啊！",
+    ],
+    engText: [
+      "During Lamrim class discussions, we all know that every family has difficult problems to deal with. Some problems seem to go on for years without resolution—but in truth, it’s not that the problems themselves can’t be solved, it’s that our minds are stuck. No matter how we think about it, we just can’t let go. So what can we do? Many people choose to study the Dharma. By developing our wisdom and compassion, we bring joy to our hearts. And then we realize: we don’t have to wait for everyone around us to do everything right in order to be happy. It doesn’t have to be that passive. Once we’ve learned the Dharma and opened our hearts, happiness naturally arises.",
+      "This kind of inner freedom doesn’t always rely on others to give us strength—the Dharma itself can empower our minds. With that strength, our hearts open, and we feel at ease. When we’re happy, those around us who may not feel so well often feel uplifted too, just by seeing our joy. Otherwise, if we walk around with a gloomy face every day, and everyone at home has to deal with that, it makes life really hard for everyone!",
+    ],
     audio: "",
   },
   {
     chiTitle: "不堕恶趣",
     engTitle: "No lower realms",
-    chiText: [""],
-    engText: [""],
+    chiText: [
+      "通常我们都是不了解自己，我们对自己的看法都是太狭隘或者完全颠倒的，因为佛菩萨会认为我们在人天善道、我们在人道，我们是有能力修行的。",
+      "视野辽阔吧！我们从人间一下子看到了六道，看到了：喔！在六道轮回的有情里，人天善道还是居在可以修善的这样一个显赫的位置！非常尊贵的位置！就是成为一个人。多么伟大的事情──居然我是一个人，我在人道！",
+      "平常没有意识到这件事不容易吧！因为我们不会去六道轮回这样想啊！我们会觉得好像本来就是一个人、永远都是一个人，都不会失去这个人身一般。可是在这里边六道啊、六道，我们好不容易得到了一个人身，而这个人身在最开始修行的时候是可能修行的呀！",
+    ],
+    engText: [
+      "Usually, we don’t truly understand ourselves. Our view of ourselves is often too narrow or completely mistaken. But from the perspective of the Buddhas and Bodhisattvas, we are currently in the human realm—within the fortunate realms of the heavens and humanity—which means we have the ability to practice the path.",
+      "What a vast perspective this is! All of a sudden, we’re looking beyond the human world and seeing the six realms. And within the sentient beings of the six realms of samsara, the heavenly and human realms stand out as noble positions where one can still cultivate virtue. It’s an extremely precious state—to be human. How amazing it is that I am a human being, that I have a human life!",
+      "It’s not easy to become aware of this, is it? Because we don’t normally think in terms of the six realms of rebirth. We tend to think we’ve always been human and will continue to be human forever, as if we’ll never lose this human body. But when we understand the six realms, we realize just how rare it is to have gained a human birth—and that this human life is precisely the right starting point for spiritual practice.",
+    ],
     audio: "",
   },
   {
     chiTitle: "脱离轮回",
     engTitle: "Break the cycle",
-    chiText: [""],
-    engText: [""],
+    chiText: [
+      "所以这一生遇到宗大师教法、遇到善知识，实际上是一个我们可以脱离恶趣、脱离轮回的最美好的时机，当这个时机来到眼前的时候，必须拼命地用全部的注意力抓住。尽管我们还会被轮回大梦的所谓安乐击昏了头，想要在生死中找寻什么真正的快乐，但是一听到佛陀的呼唤、一听到善知识的呼唤，我们要立刻把那个睁不开的眼睛努力地睁，一直昏昧的那个抉择慧把它清晰。因为在能够听到的时候还不努力清醒的话，就会到再也听不到的地方，或者听了也完全没反应。所以这样的人身对我们来说，是非常珍贵、非常地义大，也是很危险的，因为一旦利用不好这样的时光，反而造恶业，就成了下辈子堕落的一个因缘",
+    ],
+    engText: [
+      "Therefore, encountering the teaching from Master Tsong-kha-pa and virtuous teachers in this life is actually the most wonderful opportunity for us to free [ourselves] from the miserable realms and cyclic existence. When such opportunity is readily available in front of us, we should at all cost, exert every effort to get hold of it. Although we could still be defeated [and lured away] by the so-called happiness in the great dream of cyclic existence, trying to seek for the [little] happiness between birth and death, upon hearing the calling from Buddha or virtuous teachers, we would strive with our best effort to keep our closed eyes opened, and sharpen the discerning wisdom that is currently obscured by ignorance,. For if we don’t try strenuously to stay awake while we still have the opportunity to listen to the teachings, we may end up being reborn into those realms where teachings would never be heard again, or become apathetic even if we can hear the teaching. Understandably, this human form of leisure and opportunity we have now is very precious and meaningful, but at the same time it can be very pernicious. Because, instead of making good use of this human form, once we have created some negative karma, this human form will become the cause for our downfall in the next rebirth/life. ",
+    ],
     audio: "",
   },
   {
     chiTitle: "我要成佛",
     engTitle: "Attain buddhahood",
-    chiText: [""],
-    engText: [""],
+    chiText: [
+      "师父的期待非常地美，就是一直走上去，走到圆满成佛的这条路。看看！第一盘还没讲完，师父就已经提出了「圆满成佛的这条路」。当这几个字落入你我的耳根，融进了我们的内心的时候，这几个字在我们生命中所产生的作用，是非常非常震撼的！因为我们居然知道了有成佛这件事！居然知道了有一个善知识，将在《广论》里和我们详细地讨论关于「我」怎么样成佛的事情。这个「我」，是坐在你的录音机边啊，还是手机旁，坐在什么旁边跟我们一起学《广论》的，就是很多个「我」。居然有一个善知识跟我们讨论「我」怎么样成佛这件事情！所以不管我知道得多少、我习气多重啊、我没有时间啊、我笨啊，甚至我身体不好呀，我把其他的事情做完我就没有体力学……这都没关系！因为就这么短的时间，师父还是来为我们讲这件事了，我们遇到他了！",
+    ],
+    engText: [
+      "Master’s wish was really beautiful; it is for us to keep progressing, till we attain Buddhahood. Look! This first discourse was yet to be completed, and Master already mentioned attaining Buddhahood. When these words enter our ears, entering our mind, these few words have benefit us, the effect of it is very astounding! Because we knew there was such a thing as enlightenment! And we know there is an excellent teacher, who would be discussing Lamrim, and in detail on how “I” can attain enlightenment. This “I”, could be sitting beside your recorder, or beside your handphone, or whoever that is sitting beside us to discuss and learn Lamrim; there are many of such “I”.  In fact, there is this excellent teacher discussing this matter on how “I” can be a Buddha. Hence, regardless of how much I know, how serious my bad habits are, I don’t have time, I am not smart, or I am not fit enough, I have no energy to learn and study after I finish my work….it doesn’t matter! Because in such short period of time, Master will still come and elaborate this matter to us. We have met him! ",
+    ],
     audio: "",
   },
   {
     chiTitle: "心力变强",
     engTitle: "Enhance mental strength",
-    chiText: [""],
-    engText: [""],
+    chiText: [
+      "所以这一节广论课好好地上的话，那么我们在一周或者两、三天所累积的焦虑等等痛苦，或者说被伤害了，就会感觉到听课的时候平复下来了、内心稳定了下来。这样的话，听完课之后我们将有余力去应付生活中各式各样的挑战，我们就不会一直累积压力；每一节课都会是一种纾压，都会对自心完成一个很深度的关注和抚慰，还有解开那个结。由于调整内心的缘故，我们生命的空间感就会越来越大，抗压力会不会变强呢？会变强！因为心里的空间感变大了，你可以承载更多东西，与人相处的时候也不会那么敏感和脆弱；我们处理自心矛盾的能力变强的时候，那么跟周围人相处的时候也会容易。",
+    ],
+    engText: [
+      "So if we attend this Lamrim class wholeheartedly, the anxiety and pain we’ve accumulated over the past week—or even just over two or three days—such as feelings of being hurt or overwhelmed, will start to ease during the session. Our hearts begin to settle and feel more stable. As a result, after class, we’ll have more emotional strength to face the various challenges in life. We won’t keep letting stress build up. Each class becomes a kind of relief—a moment of deep attention, comfort, and release for the mind. It’s like untying a knot within.",
+      "Because we are adjusting and settling our minds, our sense of space within life starts to expand. And doesn’t that increase our resilience? Yes, it does! When your inner space grows, you can carry more—you become less sensitive and fragile in your relationships. And as your ability to handle your own inner conflicts improves, your interactions with others naturally become smoother too.",
+    ],
     audio: "",
   },
   {
@@ -137,12 +175,25 @@ export let quizDict = [
     chiText: [""],
     engText: [""],
     audio: "",
+    special: `<iframe width="800" height="450" src="https://www.youtube.com/embed/JGXcynXURZQ?si=1Ky3Ir5gRkmNHC6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
   },
   {
     chiTitle: "面对逆境",
     engTitle: "Learn to face adversity",
-    chiText: [""],
-    engText: [""],
+    chiText: [
+      "「佛子虽逢难，善增罪不生。」这里边就讲的是一样的道理。",
+      "那为什么他在恶劣的环境中反而增加善呢？增加他的慈悲心呢？就是因为他知道外境的这种好与丑并不能决定自己是幸福或者悲惨，真正让我们的生命朝着增上的那个目标而去的，就是我们内心对所经历的这件事的看法。不是说经历了什么事你就一定会怎样，而是正在经历这件事情时候，你对它的见解是什么？这个见解是我们每个人要自己弄清楚：这个境是来净化我们的，还是来──考验吗？考验什么？考验会不会执持善念或善法呀！",
+    ],
+    engText: [
+      "Though a child of the Buddha may encounter hardship, their virtue increases and no evil is born.”",
+      "This line conveys the same principle.",
+      "Why is it that someone can increase their goodness and compassion even in harsh or negative environments? It’s because they understand that the outer conditions—whether pleasant or ugly—do not determine whether one is happy or miserable. What truly guides our life toward spiritual growth is the way we view what we experience.",
+      "It’s not the event itself that decides your fate, but your attitude while going through it. What is your interpretation of this experience? That’s something each of us must examine for ourselves:",
+      "Is this situation here to purify us?",
+      "Or is it a test?",
+      "If it’s a test, what is it testing?",
+      "It’s testing whether we will uphold virtuous thoughts and wholesome principles.",
+    ],
     audio: "",
   },
 ];
@@ -198,6 +249,10 @@ function attachQuizListeners() {
     radio.addEventListener("click", function (event) {
       stopAudio();
 
+      document.getElementById("selectionTextChi").innerHTML = "";
+      document.getElementById("selectionTextEng").innerHTML = "";
+      document.getElementById("specialSelection").innerHTML = "";
+
       if (this === lastChecked) {
         this.checked = false;
         lastChecked = null;
@@ -207,20 +262,24 @@ function attachQuizListeners() {
         document.querySelector("#quizRegisterBtn").classList.add("hidden");
       } else {
         lastChecked = this;
-        document.getElementById("selectionTextChi").innerHTML = "";
-        document.getElementById("selectionTextEng").innerHTML = "";
 
         const selected = quizDict.find((item) => item.chiTitle === this.value);
-        for (let text of selected.chiText || []) {
-          const p = document.createElement("p");
-          p.textContent = text;
-          document.getElementById("selectionTextChi").append(p);
-        }
 
-        for (let text of selected.engText || []) {
-          const p = document.createElement("p");
-          p.textContent = text;
-          document.getElementById("selectionTextEng").append(p);
+        if (selected.special) {
+          document.getElementById("specialSelection").innerHTML =
+            selected.special;
+        } else {
+          for (let text of selected.chiText || []) {
+            const p = document.createElement("p");
+            p.textContent = text;
+            document.getElementById("selectionTextChi").append(p);
+          }
+
+          for (let text of selected.engText || []) {
+            const p = document.createElement("p");
+            p.textContent = text;
+            document.getElementById("selectionTextEng").append(p);
+          }
         }
 
         document.querySelector("#quizRegisterBtn").classList.remove("hidden");

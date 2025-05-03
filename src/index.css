@@ -331,7 +331,7 @@ svg {
 
 .quizGrid {
   --padding: 5px;
-  width: calc(60px * 2 + var(--padding) * 2);
+  width: calc(70px * 2 + var(--padding) * 2);
   border-radius: 10px;
   background-color: white;
   padding: var(--padding);
@@ -370,8 +370,10 @@ svg {
 }
 
 #quizRegisterBtn {
-  right: 2%;
-  bottom: 5%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
 }
 
 .text-center {
@@ -392,7 +394,11 @@ input[type="radio"] {
 }
 
 #quizGridDiv {
-  min-width: 596px;
+  min-width: 676px;
+}
+
+.self-center {
+  align-self: center;
 }
 
 .bg-black {

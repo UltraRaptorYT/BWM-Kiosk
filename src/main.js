@@ -60,24 +60,26 @@ document.querySelector("#app").innerHTML = `
         Why learn <span class="redText">Buddhism?</span>
       </h1>
     </div>
-    <div class="flex p-5 w-full gap-5 h-full grow items-center">
-      <div class="grid grid-cols-4 bg-red-900 p-5 gap-3" id="quizGridDiv">
+    <div class="flex p-5 w-full gap-5 h-full grow">
+      <div class="grid grid-cols-4 bg-red-900 p-5 gap-3 self-center" id="quizGridDiv">
       </div>
-      <div class="relative grow flex items-center justify-center flex-col gap-3">
+      <div class="relative grow flex items-center justify-center flex-col gap-3 grow">
         <div class="text-2xl gap-3 flex flex-col" id="selectionTextChi">请选一个！</div>
         <div class="text-xl gap-3 flex flex-col" id="selectionTextEng">Please choose one!</div>
+        <div id="specialSelection"></div>
+        <button
+          class="btn-gray text-4xl btn btn-xl hidden"
+          id="quizRegisterBtn"
+        >
+          <span>我要报名！</span>
+        </button>
       </div>
     </div>
-    <button
-      class="absolute flex flex-col btn-gray text-4xl btn btn-xl hidden"
-      id="quizRegisterBtn"
-    >
-      <span>我要报名！</span>
-    </button>
+
   </div>
   <div class="hidden fullHeight relative bg-black flex items-center justify-center flex-col gap-3" id="lifeDiv">
     <div class="p-5 h-full">
-      <button class="btn bg-transparent homeBtn" id="lifeHomeBtn">
+      <button class="btn bg-transparent homeBtn text-white" id="lifeHomeBtn">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
           <path
             d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
@@ -104,12 +106,12 @@ document.querySelector("#app").innerHTML = `
 populateQuizGrid(quizDict);
 redirect(
   document.querySelector("#registerBtn"),
-  "http://bwm.sg/signup",
+  "https://bwm.sg/signup",
   "_blank"
 );
 redirect(
   document.querySelector("#quizRegisterBtn"),
-  "http://bwm.sg/signup",
+  "https://bwm.sg/signup",
   "_blank"
 );
 toggle(document.querySelector("#quizBtn"), "quiz");
