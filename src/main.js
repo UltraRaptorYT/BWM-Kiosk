@@ -219,8 +219,8 @@ document.querySelector("#registerBtn").addEventListener("click", () => {
 });
 
 document.querySelector("#lifeBtn").addEventListener("click", () => {
-  const playlistId = "PL2veEdJiJs8juMu-5HXn43Pm9qkljRUMw"; // Replace with your own playlist ID
-  const totalVideos = 10; // Replace with actual count
+  const playlistId = "PL2veEdJiJs8gu8wUp7UsWXNJR8j-O7axn"; // Replace with your own playlist ID
+  const totalVideos = 7; // Replace with actual count
   const randomIndex = Math.floor(Math.random() * totalVideos) + 1;
 
   console.log(randomIndex);
