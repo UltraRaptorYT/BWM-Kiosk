@@ -101,7 +101,7 @@ document.querySelector("#app").innerHTML = `
       </div>
     </div>
   </div>
-  <div class="hidden" id="seminarDiv">
+  <div class="hidden fullHeight flex items-center" id="seminarDiv">
     <button class="btn bg-transparent homeBtn" id="seminarHomeBtn">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
         <path
@@ -109,6 +109,9 @@ document.querySelector("#app").innerHTML = `
         />
       </svg>
     </button>
+    <iframe src="https://bwmonastery.org.sg/calendar" width="100%" style="height:90vh" class="grow">
+      <p>Your browser does not support iframes.</p>
+    </iframe>
   </div>
   <div class="hidden fullHeight relative flex flex-col items-center justify-center" id="wheelSpinnerDiv">
     <button class="btn bg-transparent homeBtn" id="wheelHomeBtn">
@@ -118,6 +121,11 @@ document.querySelector("#app").innerHTML = `
         />
       </svg>
     </button>
+    <div class="flex flex-col absolute text-4xl" id="wheelSpinnerTitle">
+      <p>抽一张智慧法语</p>
+      <p>Spin the wheel to get your</p>
+      </p>Wisdom Quote</p>
+    </div>
     <div class="grow" id="wheelContainer">
       <fieldset class="ui-wheel-of-fortune" style="--_items: 28;">
         <ul data-itemCount="28">

@@ -649,3 +649,9 @@ input[type="radio"] {
   top: 50%;
   left: 50%;
 }
+
+#wheelSpinnerTitle {
+  top: 5%;
+  color: #90304b;
+  left: 5%;
+}
