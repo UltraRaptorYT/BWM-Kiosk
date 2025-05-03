@@ -216,7 +216,7 @@ export function populateQuizGrid(quizDict) {
 
     const engSpan = document.createElement("span");
     engSpan.className =
-      "text-center grow flex text-2xl items-center break-words hyphens-auto";
+      "text-center grow flex text-2-5xl items-center break-words hyphens-auto";
     engSpan.textContent = item.engTitle;
 
     const chiSpan = document.createElement("span");

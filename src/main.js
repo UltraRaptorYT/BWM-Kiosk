@@ -58,10 +58,10 @@ document.querySelector("#app").innerHTML = `
       </svg>
     </button>
     <div id="quizTitle">
-      <h1 class="text-4xl text-outline goldText">
+      <h1 class="text-6xl text-outline goldText">
         为什么要<span class="redText">学佛？</span>
       </h1>
-      <h1 class="text-4xl text-outline goldText">
+      <h1 class="text-6xl text-outline goldText">
         Why learn <span class="redText">Buddhism?</span>
       </h1>
     </div>
