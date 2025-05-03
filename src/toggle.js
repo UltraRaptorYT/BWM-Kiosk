@@ -1,14 +1,28 @@
-export function toggle(element, type) {
+export function toggle(element, type, onHideCallback = null) {
   element.addEventListener("click", () => {
-    if (type == "quiz") {
-      document.querySelector("#quizDiv").classList.toggle("hidden");
-      document.querySelector("#homeDiv").classList.toggle("hidden");
-    } else if (type == "life") {
-      document.querySelector("#lifeDiv").classList.toggle("hidden");
-      document.querySelector("#homeDiv").classList.toggle("hidden");
-    } else if (type == "seminar") {
-      document.querySelector("#seminarDiv").classList.toggle("hidden");
-      document.querySelector("#homeDiv").classList.toggle("hidden");
+    const homeDiv = document.querySelector("#homeDiv");
+
+    if (type === "quiz") {
+      const quizDiv = document.querySelector("#quizDiv");
+      if (!quizDiv.classList.contains("hidden") && onHideCallback) {
+        onHideCallback(); // Call cleanup before hiding
+      }
+      quizDiv.classList.toggle("hidden");
+      homeDiv.classList.toggle("hidden");
+    } else if (type === "life") {
+      const lifeDiv = document.querySelector("#lifeDiv");
+      if (!lifeDiv.classList.contains("hidden") && onHideCallback) {
+        onHideCallback();
+      }
+      lifeDiv.classList.toggle("hidden");
+      homeDiv.classList.toggle("hidden");
+    } else if (type === "seminar") {
+      const seminarDiv = document.querySelector("#seminarDiv");
+      if (!seminarDiv.classList.contains("hidden") && onHideCallback) {
+        onHideCallback();
+      }
+      seminarDiv.classList.toggle("hidden");
+      homeDiv.classList.toggle("hidden");
     } else {
       console.log(type, "TOGGLE ERROR!");
     }

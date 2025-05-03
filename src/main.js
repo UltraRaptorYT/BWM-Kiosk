@@ -1,7 +1,12 @@
 import "./index.css";
 import { toggle } from "./toggle";
 import { redirect } from "./redirect";
-import { populateQuizGrid, quizDict } from "./populateQuizGrid";
+import {
+  populateQuizGrid,
+  quizDict,
+  stopAudio,
+  resetQuizState,
+} from "./populateQuizGrid";
 
 document.querySelector("#app").innerHTML = `
   <div class="heroBG fullHeight relative" id="homeDiv">
@@ -64,6 +69,10 @@ document.querySelector("#app").innerHTML = `
       <div class="grid grid-cols-4 bg-red-900 p-5 gap-3 self-center" id="quizGridDiv">
       </div>
       <div class="relative grow flex items-center justify-center flex-col gap-3 grow">
+        <button id="playAudioBtn" class="text-xl btn btn-gray mr-auto hidden">
+          ▶️ 播放音频 / Play Audio
+        </button>
+
         <div class="text-2xl gap-3 flex flex-col" id="selectionTextChi">请选一个！</div>
         <div class="text-xl gap-3 flex flex-col" id="selectionTextEng">Please choose one!</div>
         <div id="specialSelection"></div>
@@ -114,12 +123,31 @@ redirect(
   "https://bwm.sg/signup",
   "_blank"
 );
-toggle(document.querySelector("#quizBtn"), "quiz");
-toggle(document.querySelector("#quizHomeBtn"), "quiz");
-toggle(document.querySelector("#lifeBtn"), "life");
-toggle(document.querySelector("#lifeHomeBtn"), "life");
-toggle(document.querySelector("#seminarBtn"), "seminar");
-toggle(document.querySelector("#seminarHomeBtn"), "seminar");
+
+toggle(document.querySelector("#quizBtn"), "quiz", () => {
+  stopAudio();
+  resetQuizState();
+});
+toggle(document.querySelector("#quizHomeBtn"), "quiz", () => {
+  stopAudio();
+  resetQuizState();
+});
+toggle(document.querySelector("#lifeBtn"), "life", () => {
+  stopAudio();
+  resetQuizState();
+});
+toggle(document.querySelector("#lifeHomeBtn"), "life", () => {
+  stopAudio();
+  resetQuizState();
+});
+toggle(document.querySelector("#seminarBtn"), "seminar", () => {
+  stopAudio();
+  resetQuizState();
+});
+toggle(document.querySelector("#seminarHomeBtn"), "seminar", () => {
+  stopAudio();
+  resetQuizState();
+});
 
 // let quizDict = {
 //   想要快乐: {

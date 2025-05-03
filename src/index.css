@@ -84,6 +84,10 @@
   transform-origin: center;
 }
 
+.space-x-3 > * + * {
+  margin-left: 0.75rem; /* 12px */
+}
+
 #quizTitle {
   padding: 1rem;
 }
@@ -122,6 +126,14 @@ body {
 
 .gap-3 {
   gap: 0.75rem; /* 12px */
+}
+
+.p-2 {
+  padding: 0.5rem; /* 8px */
+}
+
+.mr-auto {
+  margin-right: auto;
 }
 
 .align-center {
