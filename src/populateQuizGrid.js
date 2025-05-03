@@ -3,7 +3,7 @@ export let quizDict = [
     chiTitle: "要更快乐",
     engTitle: "To be Happier",
     chiText: [
-      "学经典和苦乐有没有吗？学经典究竟可不可以引出痛苦，可不可以得到具体的快乐关系？不是离苦得乐的途径吗？如果途径是的话，我们要花多少时间来学习教典呢？如果说是途径，为什么它是途径呢？因为痛苦如果来自颠倒的认知、源于错误的见解，那么把错误的见解颠倒过来的那就是最重要的。那么谁的语言、谁的劝说、谁的语言、谁的经典，可以让我们把心里的错误改变呢？说：「法、佛法！」法有什么样的作用？能改变我们吗？能救护我们吗？法的定义喔！我们改变吗？一定是改变苦的意思，然后把没有得到的快乐，这叫改变。救护，救护是什么？如果活得好好的，救我呀？一定是从苦的地方救走，救到乐的地方，所以这就是法的本质。",
+      "学经典和苦乐有没有关系？学经典究竟可不可以引出痛苦，可不可以得到具体的快乐关系？不是离苦得乐的途径吗？如果途径是的话，我们要花多少时间来学习教典呢？如果说是途径，为什么它是途径呢？因为痛苦如果来自颠倒的认知、源于错误的见解，那么把错误的见解颠倒过来的那就是最重要的。那么谁的语言、谁的劝说、谁的语言、谁的经典，可以让我们把心里的错误改变呢？说：「法、佛法！」法有什么样的作用？能改变我们吗？能救护我们吗？法的定义喔！我们改变吗？一定是改变苦的意思，然后把没有得到的快乐，这叫改变。救护，救护是什么？如果活得好好的，救我呀？一定是从苦的地方救走，救到乐的地方，所以这就是法的本质。",
     ],
     engText: [
       "Does studying scriptures have anything to do with the issue of suffering and happiness? Can studying scriptures really remove suffering, and attain the ultimate happiness? Is it the path to remove suffering and attain happiness? If so, how much time will we devote in studying the scriptures? If it is the way to go, then what kind of path is it? For if suffering and happiness arise from inverted perception and erroneous views, then reversing the erroneous views becomes the most important task. Then whose language, whose persuasion, whose speech, and whose scriptures can help correct our flaws within? The answer is “Dharma – Buddha’s teaching!” What function does the teaching provide? Can it change us? Can it relieve us? Dharma, by definition, is to help us change. What do we need to change? It has to be transforming suffering and to attain the promised happiness. This is known as change. Then what does “relieve” mean? If one lives happily, why do I need to be relieved? It has to be relieving one from suffering aspect to happiness aspect. This is the characteristic of Dharma. ",
@@ -307,10 +307,14 @@ function attachQuizListeners() {
         document.querySelector("#quizRegisterBtn").classList.remove("hidden");
 
         if (selected.audio) {
-          currentAudio = new Audio(`/audio/${selected.audio}`);
+          currentAudio =
+            preloadedAudios[selected.audio] ||
+            new Audio(`/audio/${selected.audio}`);
           const playBtn = document.getElementById("playAudioBtn");
           playBtn.classList.remove("hidden");
-          playBtn.textContent = "▶️ 播放音频 / Play Audio";
+          playBtn.textContent = "⏸️ 暂停音频 / Pause Audio";
+
+          currentAudio.play(); // 🔊 Auto-play on selection
 
           playBtn.onclick = () => {
             if (currentAudio.paused) {
@@ -333,3 +337,13 @@ function attachQuizListeners() {
     });
   });
 }
+
+// Preload all quiz audio
+const preloadedAudios = {};
+quizDict.forEach((item) => {
+  if (item.audio) {
+    const audio = new Audio(`/audio/${item.audio}`);
+    audio.preload = "auto";
+    preloadedAudios[item.audio] = audio;
+  }
+});

@@ -21,7 +21,7 @@ document.querySelector("#app").innerHTML = `
     <div class="flex flex-col gap-5" id="optionDiv">
       <button class="optionBG" id="quizBtn">
         <p class="chiText">为什么今生一定要学佛法？</p>
-        <p class="engText">Why Study Buddhism?</p>
+        <p class="engText">Why Learn Buddhism?</p>
       </button>
       <button class="optionBG" id="registerBtn">
         <p class="chiText">想要报名佛学班？点击查看最新开课时间！</p>
