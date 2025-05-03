@@ -23,6 +23,14 @@ export function toggle(element, type, onHideCallback = null) {
       }
       seminarDiv.classList.toggle("hidden");
       homeDiv.classList.toggle("hidden");
+    } else if (type === "wheel") {
+      const wheelSpinnerDiv = document.querySelector("#wheelSpinnerDiv");
+      if (!wheelSpinnerDiv.classList.contains("hidden") && onHideCallback) {
+        onHideCallback();
+      }
+      wheelSpinnerDiv.classList.toggle("hidden");
+      homeDiv.classList.toggle("hidden");
+      console.log("HI");
     } else {
       console.log(type, "TOGGLE ERROR!");
     }
