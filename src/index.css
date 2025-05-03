@@ -321,6 +321,14 @@ svg {
   flex-grow: 1;
 }
 
+.break-words {
+  overflow-wrap: break-word;
+}
+
+.hyphens-auto {
+  hyphens: auto;
+}
+
 .quizGrid {
   --padding: 5px;
   width: calc(60px * 2 + var(--padding) * 2);
@@ -329,7 +337,6 @@ svg {
   padding: var(--padding);
   display: flex;
   flex-direction: column;
-  gap: 5px;
   align-items: center;
   transition: all 0.3s ease;
   font-weight: bold;
@@ -363,8 +370,8 @@ svg {
 }
 
 #quizRegisterBtn {
-  right: 0;
-  bottom: 20px;
+  right: 2%;
+  bottom: 5%;
 }
 
 .text-center {

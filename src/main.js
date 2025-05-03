@@ -44,129 +44,50 @@ document.querySelector("#app").innerHTML = `
       <img src="./wheel.png" id="wheel"/>
     </div>
   </div>
-  <div class="hidden fullHeight relative" id="quizDiv">
-    <div class="p-5">
-      <button class="btn bg-transparent homeBtn" id="quizHomeBtn">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-          <path
-            d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
-          />
-        </svg>
-      </button>
-      <div id="quizTitle">
-        <h1 class="text-4xl text-outline goldText">
-          为什么要<span class="redText">学佛？</span>
-        </h1>
-        <h1 class="text-4xl text-outline goldText">
-          Why learn <span class="redText">Buddhism?</span>
-        </h1>
-      </div>
-      <div class="flex p-5 w-full gap-5">
-        <div class="grid grid-cols-4 bg-red-900 p-5 gap-3" id="quizGridDiv">
-          <label class="quizGrid flex justify-between items-center gap-2" for="想要快乐">
-            <input type="radio" class="quizRadio" name="quiz" id="想要快乐" value="想要快乐"/>
-            <span class="text-center grow flex items-center">Happiness</span>
-            <span class="text-4xl text-center">想要快乐</span>
-          </label>
-          <label class="quizGrid flex justify-between items-center gap-2" for="增长智慧">
-            <input type="radio" class="quizRadio" name="quiz" id="增长智慧" value="增长智慧"/>
-            <span class="text-center grow flex items-center">Increase wisdom</span>
-            <span class="text-4xl text-center">增长智慧</span>
-          </label>
-          <label class="quizGrid flex justify-between items-center gap-2" for="更加善良">
-            <input type="radio" class="quizRadio" name="quiz" id="更加善良" value="更加善良"/>
-            <span class="text-center grow flex items-center">Increase compassion</span>
-            <span class="text-4xl text-center">更加善良</span>
-          </label>
-          <label class="quizGrid flex justify-between items-center gap-2" for="结交善友">
-            <input type="radio" class="quizRadio" name="quiz" id="结交善友" value="结交善友"/>
-            <span class="text-center grow flex items-center">Virtuous friends</span>
-            <span class="text-4xl text-center">结交善友</span>
-          </label>
-          <label class="quizGrid flex justify-between items-center gap-2" for="健康长寿">
-            <input type="radio" class="quizRadio" name="quiz" id="健康长寿" value="健康长寿"/>
-            <span class="text-center grow flex items-center">Good health & longevity</span>
-            <span class="text-4xl text-center">健康长寿</span>
-          </label>
-          <label class="quizGrid flex justify-between items-center gap-2" for="减少烦恼">
-            <input type="radio" class="quizRadio" name="quiz" id="减少烦恼" value="减少烦恼"/>
-            <span class="text-center grow flex items-center">Reduce afflictions</span>
-            <span class="text-4xl text-center">减少烦恼</span>
-          </label>
-          <label class="quizGrid flex justify-between items-center gap-2" for="增加福报">
-            <input type="radio" class="quizRadio" name="quiz" id="增加福报" value="增加福报"/>
-            <span class="text-center grow flex items-center">Increase merits</span>
-            <span class="text-4xl text-center">增加福报</span>
-          </label>
-          <label class="quizGrid flex justify-between items-center gap-2" for="生命意义">
-            <input type="radio" class="quizRadio" name="quiz" id="生命意义" value="生命意义"/>
-            <span class="text-center grow flex items-center">Meaning of life</span>
-            <span class="text-4xl text-center">生命意义</span>
-          </label>
-          <label class="quizGrid flex justify-between items-center gap-2" for="停止痛苦">
-            <input type="radio" class="quizRadio" name="quiz" id="停止痛苦" value="停止痛苦"/>
-            <span class="text-center grow flex items-center">Stop suffering</span>
-            <span class="text-4xl text-center">停止痛苦</span>
-          </label>
-          <label class="quizGrid flex justify-between items-center gap-2" for="家庭和谐">
-            <input type="radio" class="quizRadio" name="quiz" id="家庭和谐" value="家庭和谐"/>
-            <span class="text-center grow flex items-center">Family harmony</span>
-            <span class="text-4xl text-center">家庭和谐</span>
-          </label>
-          <label class="quizGrid flex justify-between items-center gap-2" for="不堕恶趣">
-            <input type="radio" class="quizRadio" name="quiz" id="不堕恶趣" value="不堕恶趣"/>
-            <span class="text-center grow flex items-center">Avoid rebirth in lower realms</span>
-            <span class="text-4xl text-center">不堕恶趣</span>
-          </label>
-          <label class="quizGrid flex justify-between items-center gap-2" for="脱离轮回">
-            <input type="radio" class="quizRadio" name="quiz" id="脱离轮回" value="脱离轮回"/>
-            <span class="text-center grow flex items-center">Liberate from cyclic existence</span>
-            <span class="text-4xl text-center">脱离轮回</span>
-          </label>
-          <label class="quizGrid flex justify-between items-center gap-2" for="我要成佛">
-            <input type="radio" class="quizRadio" name="quiz" id="我要成佛" value="我要成佛"/>
-            <span class="text-center grow flex items-center">Attain buddhahood</span>
-            <span class="text-4xl text-center">我要成佛</span>
-          </label>
-          <label class="quizGrid flex justify-between items-center gap-2" for="心力变强">
-            <input type="radio" class="quizRadio" name="quiz" id="心力变强" value="心力变强"/>
-            <span class="text-center grow flex items-center">Enhance mental strength</span>
-            <span class="text-4xl text-center">心力变强</span>
-          </label>
-          <label class="quizGrid flex justify-between items-center gap-2" for="佛门礼仪">
-            <input type="radio" class="quizRadio" name="quiz" id="佛门礼仪" value="佛门礼仪"/>
-            <span class="text-center grow flex items-center">Buddhist etiquette</span>
-            <span class="text-4xl text-center">佛门礼仪</span>
-          </label>
-          <label class="quizGrid flex justify-between items-center gap-2" for="面对逆境">
-            <input type="radio" class="quizRadio" name="quiz" id="面对逆境" value="面对逆境"/>
-            <span class="text-center grow flex items-center">Learn to face adversity</span>
-            <span class="text-4xl text-center">面对逆境</span>
-          </label>
-        </div>
-        <div class="relative grow flex items-center justify-center">
-          <div class="text-3xl gap-3 flex flex-col" id="selectionText">Please choose one!</div>
-          <button
-            class="absolute flex flex-col btn-gray text-4xl btn btn-xl hidden"
-            id="quizRegisterBtn"
-          >
-            <span>我要报名！</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hidden fullHeight relative p-5 bg-black flex items-center justify-center flex-col gap-3" id="lifeDiv">
-    <button class="btn bg-transparent homeBtn" id="lifeHomeBtn">
+  <div class="hidden fullHeight relative p-5 flex flex-col" id="quizDiv">
+    <button class="btn bg-transparent homeBtn" id="quizHomeBtn">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
         <path
           d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
         />
       </svg>
     </button>
-    <h1 class="text-white text-center">Life of a buddhism Class 佛学班同学们精彩的一年</h1>
-    <div class="grow flex w-full h-full p-5 items-center justify-center">
-      <iframe class="aspectVideo" src="https://www.youtube.com/embed/CrTUWIBVrkk?si=vKBcNnJ4iRqmMSTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div id="quizTitle">
+      <h1 class="text-4xl text-outline goldText">
+        为什么要<span class="redText">学佛？</span>
+      </h1>
+      <h1 class="text-4xl text-outline goldText">
+        Why learn <span class="redText">Buddhism?</span>
+      </h1>
+    </div>
+    <div class="flex p-5 w-full gap-5 h-full grow items-center">
+      <div class="grid grid-cols-4 bg-red-900 p-5 gap-3" id="quizGridDiv">
+      </div>
+      <div class="relative grow flex items-center justify-center flex-col gap-3">
+        <div class="text-2xl gap-3 flex flex-col" id="selectionTextChi">请选一个！</div>
+        <div class="text-xl gap-3 flex flex-col" id="selectionTextEng">Please choose one!</div>
+      </div>
+    </div>
+    <button
+      class="absolute flex flex-col btn-gray text-4xl btn btn-xl hidden"
+      id="quizRegisterBtn"
+    >
+      <span>我要报名！</span>
+    </button>
+  </div>
+  <div class="hidden fullHeight relative bg-black flex items-center justify-center flex-col gap-3" id="lifeDiv">
+    <div class="p-5 h-full">
+      <button class="btn bg-transparent homeBtn" id="lifeHomeBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+          <path
+            d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+          />
+        </svg>
+      </button>
+      <h1 class="text-white text-center">Life of a buddhism Class 佛学班同学们精彩的一年</h1>
+      <div class="grow flex w-full h-full p-5 items-center justify-center">
+        <iframe class="aspectVideo" src="https://www.youtube.com/embed/CrTUWIBVrkk?si=vKBcNnJ4iRqmMSTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
   <div class="hidden" id="seminarDiv">
@@ -197,8 +118,6 @@ toggle(document.querySelector("#lifeBtn"), "life");
 toggle(document.querySelector("#lifeHomeBtn"), "life");
 toggle(document.querySelector("#seminarBtn"), "seminar");
 toggle(document.querySelector("#seminarHomeBtn"), "seminar");
-
-let lastChecked = null;
 
 // let quizDict = {
 //   想要快乐: {
@@ -259,50 +178,40 @@ let lastChecked = null;
 //   },
 // };
 
-let currentAudio = null;
-let backend_url = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+// document.querySelectorAll(".quizRadio").forEach((radio) => {
+//   radio.addEventListener("click", function (event) {
+//     stopAudio();
+//     if (this === lastChecked) {
+//       // Deselect the radio if it was already selected
+//       this.checked = false;
+//       lastChecked = null;
+//       document.getElementById("selectionText").innerText = "Please choose one!";
+//       document.querySelector("#quizRegisterBtn").classList.add("hidden");
+//     } else {
+//       lastChecked = this;
+//       document.getElementById("selectionText").innerHTML = "";
+//       for (let text of quizDict[this.value]["text"]) {
+//         let paragraph = document.createElement("p");
+//         paragraph.textContent = text;
+//         document.getElementById("selectionText").append(paragraph);
+//       }
+//       document.querySelector("#quizRegisterBtn").classList.remove("hidden");
+//       fetch(
+//         `${backend_url}/stream-audio?audio=${quizDict[this.value]["audio"]}`
+//       )
+//         .then((response) => response.blob())
+//         .then((blob) => {
+//           const url = URL.createObjectURL(blob);
 
-document.querySelectorAll(".quizRadio").forEach((radio) => {
-  radio.addEventListener("click", function (event) {
-    stopAudio();
-    if (this === lastChecked) {
-      // Deselect the radio if it was already selected
-      this.checked = false;
-      lastChecked = null;
-      document.getElementById("selectionText").innerText = "Please choose one!";
-      document.querySelector("#quizRegisterBtn").classList.add("hidden");
-    } else {
-      lastChecked = this;
-      document.getElementById("selectionText").innerHTML = "";
-      for (let text of quizDict[this.value]["text"]) {
-        let paragraph = document.createElement("p");
-        paragraph.textContent = text;
-        document.getElementById("selectionText").append(paragraph);
-      }
-      document.querySelector("#quizRegisterBtn").classList.remove("hidden");
-      fetch(
-        `${backend_url}/stream-audio?audio=${quizDict[this.value]["audio"]}`
-      )
-        .then((response) => response.blob())
-        .then((blob) => {
-          const url = URL.createObjectURL(blob);
+//           if (currentAudio) {
+//             currentAudio.pause();
+//             currentAudio.currentTime = 0; // Reset playback to the start
+//           }
 
-          if (currentAudio) {
-            currentAudio.pause();
-            currentAudio.currentTime = 0; // Reset playback to the start
-          }
-
-          currentAudio = new Audio(url);
-          currentAudio.play();
-        })
-        .catch((error) => console.error("Error loading audio:", error));
-    }
-  });
-});
-
-function stopAudio() {
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio.currentTime = 0; // Reset playback
-  }
-}
+//           currentAudio = new Audio(url);
+//           currentAudio.play();
+//         })
+//         .catch((error) => console.error("Error loading audio:", error));
+//     }
+//   });
+// });
