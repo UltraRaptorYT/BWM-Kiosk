@@ -42,7 +42,7 @@ document.querySelector("#app").innerHTML = `
       <span class="text-lg">*所有课程免费！All Classes are FOC!</span>
     </div>
     <button id="wheelDiv" class="flex items-center gap-3 bg-transparent">
-      <div class="flex flex-col" id="wheelTitle">
+      <div class="flex flex-col redText" id="wheelTitle">
         <p>抽一张智慧法语</p>
         <p>Spin the wheel to get your</p>
         </p>Wisdom Quote</p>
@@ -88,7 +88,7 @@ document.querySelector("#app").innerHTML = `
 
   </div>
   <div class="hidden fullHeight relative flex items-center justify-center flex-col gap-3" id="lifeDiv">
-    <div class="p-5 h-full">
+    <div class="p-5 h-full grow w-full flex flex-col items-center justify-center gap-5">
       <button class="btn bg-transparent homeBtn text-white" id="lifeHomeBtn">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
           <path
@@ -96,7 +96,7 @@ document.querySelector("#app").innerHTML = `
           />
         </svg>
       </button>
-      <div class="text-red">我们佛学班的学习旅程 Life of our Buddhism Classes</div>
+      <div class="redText text-4xl font-bold">我们佛学班的学习旅程 Life of our Buddhism Classes</div>
       <div id="videoEmbed"></div>
     </div>
   </div>
@@ -219,6 +219,22 @@ document.querySelector("#registerBtn").addEventListener("click", () => {
 });
 
 document.querySelector("#lifeBtn").addEventListener("click", () => {
+  const playlistId = "PL2veEdJiJs8juMu-5HXn43Pm9qkljRUMw"; // Replace with your own playlist ID
+  const totalVideos = 10; // Replace with actual count
+  const randomIndex = Math.floor(Math.random() * totalVideos) + 1;
+
+  console.log(randomIndex);
+
+  const videoEmbedContainer = document.getElementById("videoEmbed");
+  videoEmbedContainer.innerHTML = `
+  <iframe width="1280" height="720"
+    src="https://www.youtube.com/embed/videoseries?list=${playlistId}&index=${randomIndex}"
+    title="YouTube Playlist"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+`;
+
   stopAudio();
   resetQuizState();
   goToView("#lifeDiv");

@@ -20,4 +20,10 @@ export function goToView(targetId, onHideCallback = null) {
   if (target) {
     target.classList.remove("hidden");
   }
+
+  if (targetId == "#quizDiv") {
+    document.body.classList.add("overflow-hidden");
+  } else {
+    document.body.classList.remove("overflow-hidden");
+  }
 }
