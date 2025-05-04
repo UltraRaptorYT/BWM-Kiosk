@@ -224,22 +224,6 @@ document.querySelector("#registerBtn").addEventListener("click", () => {
 });
 
 document.querySelector("#lifeBtn").addEventListener("click", () => {
-  const playlistId = "PL2veEdJiJs8gu8wUp7UsWXNJR8j-O7axn"; // Replace with your own playlist ID
-  const totalVideos = 7; // Replace with actual count
-  const randomIndex = Math.floor(Math.random() * totalVideos) + 1;
-
-  console.log(randomIndex);
-
-  const videoEmbedContainer = document.getElementById("videoEmbed");
-  videoEmbedContainer.innerHTML = `
-  <iframe width="1280" height="720"
-    src="https://www.youtube.com/embed/videoseries?list=${playlistId}&index=${randomIndex}"
-    title="YouTube Playlist"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
-`;
-
   stopAudio();
   resetQuizState();
   goToView("#lifeDiv");
