@@ -78,10 +78,10 @@ document.querySelector("#app").innerHTML = `
         <div class="text-xl gap-3 flex flex-col" id="selectionTextEng">Please choose one!</div>
         <div id="specialSelection"></div>
         <button
-          class="btn-gray text-4xl btn btn-xl hidden"
+          class="text-4xl btn btn-xl hidden registerBtn"
           id="quizRegisterBtn"
         >
-          <span>现在报名 Sign up now</span>
+          <span>立即报名 Enrol Now</span>
         </button>
       </div>
     </div>
@@ -96,13 +96,16 @@ document.querySelector("#app").innerHTML = `
           />
         </svg>
       </button>
-      <div class="redText text-4xl font-bold">我们佛学班的学习旅程 Life of our Buddhism Classes</div>
+      <div class="redText text-7xl font-bold flex flex-col items-center text-center">
+        <span>我们佛学班的学习旅程</span>
+        <span>Life of our Buddhism Classes</span>
+      </div>
       <div id="videoEmbed"></div>
       <button
-        class="btn-gray text-4xl btn btn-xl"
+        class="text-4xl btn btn-xl registerBtn"
         id="lifeRegisterBtn"
       >
-        <span>现在报名 Sign up now</span>
+        <span>立即报名 Enrol Now</span>
       </button>
     </div>
   </div>
@@ -291,7 +294,7 @@ function wheelOfFortune(node) {
   let animation;
   let previousEndDegree = 0;
 
-  spin.addEventListener("click", () => {
+  wheel.addEventListener("click", () => {
     if (animation) {
       animation.cancel(); // Reset the animation if it already exists
     }

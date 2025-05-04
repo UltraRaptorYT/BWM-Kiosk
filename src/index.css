@@ -357,6 +357,21 @@ svg {
   padding: 1.25rem; /* 20px */
 }
 
+.text-7xl {
+  font-size: 4.5rem; /* 72px */
+  line-height: 1;
+}
+
+.text-8xl {
+  font-size: 6rem; /* 96px */
+  line-height: 1;
+}
+
+.text-9xl {
+  font-size: 8rem; /* 128px */
+  line-height: 1;
+}
+
 .text-6xl {
   font-size: 3.75rem; /* 60px */
   line-height: 1;
@@ -461,6 +476,12 @@ svg {
   left: 0;
 }
 
+.registerBtn {
+  color: white;
+  background: #e21836;
+  font-weight: bold;
+}
+
 #quizRegisterBtn {
   cursor: pointer;
   position: fixed;
@@ -471,9 +492,6 @@ svg {
 
 #lifeRegisterBtn {
   cursor: pointer;
-  position: fixed;
-  bottom: 5%;
-  right: 20px;
   z-index: 10;
 }
 
