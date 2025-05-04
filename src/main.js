@@ -129,7 +129,7 @@ document.querySelector("#app").innerHTML = `
         />
       </svg>
     </button>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSddjVJHAfv7dGYaX0igd07FHr7y-OCRCu_72sswv_BjgNy_AA/viewform?embedded=true" width="640" height="900" frameborder="0" marginheight="0" marginwidth="0">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSddjVJHAfv7dGYaX0igd07FHr7y-OCRCu_72sswv_BjgNy_AA/viewform?embedded=true" width="750" height="900" frameborder="0" marginheight="0" marginwidth="0">
       Loading…
     </iframe>
   </div>
