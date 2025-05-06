@@ -278,7 +278,7 @@ function wheelOfFortune(node) {
   let animation;
   let previousEndDegree = 0;
 
-  wheel.addEventListener("click", () => {
+  const spinWheel = () => {
     if (animation) {
       animation.cancel(); // Reset the animation if it already exists
     }
@@ -305,7 +305,10 @@ function wheelOfFortune(node) {
       const currentValue = getResultsAtTop(node);
       spin.textContent = currentValue;
     };
-  });
+  }
+
+  spin.addEventListener("click", spinWheel);
+  wheel.addEventListener("click", spinWheel);
 }
 
 // Usage
