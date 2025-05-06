@@ -21,17 +21,21 @@ document.querySelector("#app").innerHTML = `
     </div>
     <div class="flex flex-col gap-5" id="optionDiv">
       <button class="optionBG" id="quizBtn">
-        <p class="chiText">为什么今生一定要学佛法？</p>
-        <p class="engText">Why Learn Buddhism?</p>
+        <h2 class="text-5xl text-outline goldText">
+          为什么要<span class="redText">学佛？</span>
+        </h2>
+        <h2 class="text-5xl text-outline goldText">
+          Why learn <span class="redText">Buddhism?</span>
+        </h2>
       </button>
-      <button class="optionBG" id="registerBtn">
-        <p class="chiText">想要报名佛学班*？点击查看最新开课时间！</p>
-        <p class="engText">Interested in joining a Buddhism Class*?</p>
-        <p class="engText">Click to see the latest schedule!</p>
-      </button>
-      <button class="optionBG" id="lifeBtn">
-        <p class="chiText">观赏：我们佛学班的学习旅程</p>
-        <p class="engText">Watch: Journey of our Buddhism Classes</p>
+      <button class="optionBG flex gap-3 items-center " id="lifeBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16">
+          <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm4 0v6h8V1zm8 8H4v6h8zM1 1v2h2V1zm2 3H1v2h2zM1 7v2h2V7zm2 3H1v2h2zm-2 3v2h2v-2zM15 1h-2v2h2zm-2 3v2h2V4zm2 3h-2v2h2zm-2 3v2h2v-2zm2 3h-2v2h2z"/>
+        </svg>
+        <div>
+          <p class="chiText">我们佛学班的学习旅程</p>
+          <p class="engText">Journey of our Buddhism Classes</p>
+        </div>
       </button>
       <button class="optionBG" id="seminarBtn">
         <p class="chiText">心灵提升讲座</p>
@@ -217,11 +221,11 @@ document.querySelector("#signupHomeBtn").addEventListener("click", () => {
   goToView("#homeDiv");
 });
 
-document.querySelector("#registerBtn").addEventListener("click", () => {
-  stopAudio();
-  resetQuizState();
-  goToView("#signupDiv");
-});
+// document.querySelector("#registerBtn").addEventListener("click", () => {
+//   stopAudio();
+//   resetQuizState();
+//   goToView("#signupDiv");
+// });
 
 document.querySelector("#lifeBtn").addEventListener("click", () => {
   stopAudio();
@@ -316,3 +320,7 @@ document
   .querySelectorAll(".ui-wheel-of-fortune")
   .forEach((el) => wheelOfFortune(el));
 // wheelOfFortune('.ui-wheel-of-fortune');
+
+document.getElementById("disclaimer").addEventListener("click", () => {
+  window.location.reload();
+})
