@@ -14,9 +14,17 @@ document.querySelector("#app").innerHTML = `
     <div id="imgDiv"></div>
     <div id="topLeftDiv" class="flex flex-col gap-4">
       <h1 id="lamrimTitle">佛学班招生！Find out more about our new Buddhism Classes here!</h1>
-      <div>
-        <p class="text-xl font-medium">一本蕴含无数智慧的宝典，通往快乐人生的详尽指南！</p>
-        <p class="text-xl font-medium">A book of countless wisdom, a clear guide to a happy life!</p>
+      <div class="flex gap-3 items-center">
+        <div>
+          <p class="text-xl font-medium">一本蕴含无数智慧的宝典，通往快乐人生的详尽指南！</p>
+          <p class="text-xl font-medium">A book of countless wisdom, a clear guide to a happy life!</p>
+        </div>
+        <button
+          class="text-4xl btn btn-xl registerBtn"
+          id="registerBtn"
+        >
+          <span>立即报名 Enrol Now</span>
+        </button>
       </div>
     </div>
     <div class="flex flex-col gap-5" id="optionDiv">
@@ -221,11 +229,11 @@ document.querySelector("#signupHomeBtn").addEventListener("click", () => {
   goToView("#homeDiv");
 });
 
-// document.querySelector("#registerBtn").addEventListener("click", () => {
-//   stopAudio();
-//   resetQuizState();
-//   goToView("#signupDiv");
-// });
+document.querySelector("#registerBtn").addEventListener("click", () => {
+  stopAudio();
+  resetQuizState();
+  goToView("#signupDiv");
+});
 
 document.querySelector("#lifeBtn").addEventListener("click", () => {
   stopAudio();
