@@ -251,8 +251,8 @@ export function resetQuizState() {
     lastChecked.checked = false;
     lastChecked = null;
   }
-  document.getElementById("selectionTextChi").innerText = "请选一个！";
-  document.getElementById("selectionTextEng").innerText = "Please choose one!";
+  document.getElementById("selectionTextChi").innerText = "请点击一个理由！";
+  document.getElementById("selectionTextEng").innerText = "Please Click A Reason!";
   document.getElementById("specialSelection").innerHTML = "";
   document.getElementById("quizRegisterBtn").classList.add("hidden");
 
@@ -278,13 +278,26 @@ function attachQuizListeners() {
       if (this === lastChecked) {
         this.checked = false;
         lastChecked = null;
-        document.getElementById("selectionTextChi").innerText = "请选一个！";
+        document.getElementById("selectionTextChi").innerText = "请点击一个理由！";
         document.getElementById("selectionTextEng").innerText =
-          "Please choose one!";
+          "Please Click A Reason!";
+        document.getElementById("selectionTextChi").classList.remove("text-2xl")
+        document.getElementById("selectionTextChi").classList.add("text-6xl")
+        document.getElementById("selectionTextEng").classList.remove("text-xl")
+        document.getElementById("selectionTextEng").classList.add("text-5xl")
+        document.getElementById("selectionTextChi").classList.add("font-bold")
+        document.getElementById("selectionTextEng").classList.add("font-bold")
+        document.getElementById("addPointer").classList.add("hasPointer")
         document.querySelector("#quizRegisterBtn").classList.add("hidden");
       } else {
         lastChecked = this;
-
+        document.getElementById("selectionTextChi").classList.add("text-2xl")
+        document.getElementById("selectionTextChi").classList.remove("text-6xl")
+        document.getElementById("selectionTextEng").classList.add("text-xl")
+        document.getElementById("selectionTextEng").classList.remove("text-5xl")
+        document.getElementById("selectionTextChi").classList.remove("font-bold")
+        document.getElementById("addPointer").classList.remove("hasPointer")
+        document.getElementById("selectionTextEng").classList.remove("font-bold")
         const selected = quizDict.find((item) => item.chiTitle === this.value);
 
         if (selected.special) {

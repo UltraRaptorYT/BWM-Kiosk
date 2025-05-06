@@ -73,13 +73,13 @@ document.querySelector("#app").innerHTML = `
     <div class="flex p-5 w-full gap-5 h-full grow">
       <div class="grid grid-cols-4 bg-red-900 p-5 gap-3 self-center" id="quizGridDiv">
       </div>
-      <div class="relative grow flex items-center justify-center flex-col gap-3 grow">
+      <div class="relative grow flex items-center justify-center flex-col gap-3 grow hasPointer" id="addPointer">
         <button id="playAudioBtn" class="text-xl btn btn-gray mr-auto hidden">
           ▶️ 播放音频 / Play Audio
         </button>
 
-        <div class="text-2xl gap-3 flex flex-col" id="selectionTextChi">请选一个！</div>
-        <div class="text-xl gap-3 flex flex-col" id="selectionTextEng">Please choose one!</div>
+        <div class="text-6xl gap-3 flex flex-col font-bold" id="selectionTextChi">请点击一个理由！</div>
+        <div class="text-5xl gap-3 flex flex-col font-bold" id="selectionTextEng">Please Click A Reason!</div>
         <div id="specialSelection"></div>
         <button
           class="text-4xl btn btn-xl hidden registerBtn"
