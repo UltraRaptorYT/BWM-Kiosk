@@ -129,9 +129,7 @@ document.querySelector("#app").innerHTML = `
         />
       </svg>
     </button>
-    <iframe src="https://bwmonastery.org.sg/calendar" width="100%" style="height:90vh" class="grow">
-      <p>Your browser does not support iframes.</p>
-    </iframe>
+    <img src="./seminar.png" id="seminarImg"/>
   </div>
   <div class="hidden fullHeight flex items-center justify-center" id="signupDiv">
     <button class="btn bg-transparent homeBtn" id="signupHomeBtn">
