@@ -315,7 +315,7 @@ function wheelOfFortune(node) {
       const currentValue = getResultsAtTop(node);
       spin.textContent = currentValue;
     };
-  }
+  };
 
   spin.addEventListener("click", spinWheel);
   wheel.addEventListener("click", spinWheel);
@@ -329,4 +329,23 @@ document
 
 document.getElementById("disclaimer").addEventListener("click", () => {
   window.location.reload();
-})
+});
+
+let inactivityTimeout;
+
+function resetInactivityTimer() {
+  clearTimeout(inactivityTimeout);
+  inactivityTimeout = setTimeout(() => {
+    stopAudio();
+    resetQuizState();
+    goToView("#homeDiv");
+  }, 5 * 60 * 1000); // 5 minutes = 300,000 ms
+}
+
+// Add listeners to reset timer on user interaction
+["click", "keydown", "touchstart", "mousemove"].forEach((event) =>
+  document.addEventListener(event, resetInactivityTimer)
+);
+
+// Start the initial timer
+resetInactivityTimer();
