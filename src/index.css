@@ -26,7 +26,7 @@
   background-image: url("/banner.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: calc(100% - 50px) center;
 }
 
 #imgDiv {
@@ -280,7 +280,7 @@ body {
 }
 
 #wheel {
-  height: 200px;
+  height: 450px;
 }
 
 .font-bold {
@@ -308,7 +308,7 @@ body {
   position: absolute;
   bottom: 5%;
   left: 2%;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .no-underline {
