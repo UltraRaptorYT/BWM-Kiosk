@@ -308,7 +308,7 @@ body {
   position: absolute;
   bottom: 5%;
   left: 2%;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .no-underline {
@@ -741,6 +741,38 @@ input[type="radio"] {
   color: white; /* adjust text color for contrast */
   position: relative;
   padding-right: 5rem;
+}
+
+#quizWheelContainer {
+  position: absolute;
+  left: 0;
+  z-index: 10;
+}
+
+#quizWheelBtn {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  color: white; /* adjust text color for contrast */
+  position: relative;
+  padding-right: 5rem;
+}
+
+#quizWheelBtn::before {
+  content: "";
+  position: absolute;
+  background: url("/Pointer.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(-40deg) translateY(-50%);
+  width: 100px;
+  height: 100px;
+  left: 90%;
+  top: 50%;
 }
 
 #quizBtn::before {

@@ -156,6 +156,16 @@ document.querySelector("#app").innerHTML = `
       <p>Spin the wheel to get your</p>
       </p>Wisdom Quote</p>
     </div>
+    <div id="quizWheelContainer">
+      <button class="optionBG" id="quizWheelBtn">
+        <h2 class="text-3xl text-outline goldText">
+          为什么要<span class="redText">学佛？</span>
+        </h2>
+        <h2 class="text-3xl text-outline goldText">
+          Why learn <span class="redText">Buddhism?</span>
+        </h2>
+      </button>
+    </div>
     <div class="grow" id="wheelContainer">
       <fieldset class="ui-wheel-of-fortune" style="--_items: 28;">
         <ul data-itemCount="28">
@@ -198,6 +208,12 @@ document.querySelector("#app").innerHTML = `
 populateQuizGrid(quizDict);
 
 document.querySelector("#quizBtn").addEventListener("click", () => {
+  stopAudio();
+  resetQuizState();
+  goToView("#quizDiv");
+});
+
+document.querySelector("#quizWheelBtn").addEventListener("click", () => {
   stopAudio();
   resetQuizState();
   goToView("#quizDiv");
@@ -315,7 +331,7 @@ function wheelOfFortune(node) {
       const currentValue = getResultsAtTop(node);
       spin.textContent = currentValue;
     };
-  }
+  };
 
   spin.addEventListener("click", spinWheel);
   wheel.addEventListener("click", spinWheel);
@@ -329,7 +345,7 @@ document
 
 document.getElementById("disclaimer").addEventListener("click", () => {
   window.location.reload();
-})
+});
 
 let inactivityTimeout;
 
